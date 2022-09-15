@@ -4,6 +4,12 @@ import {
   Routes,
 } from 'react-router-dom';
 
+import Home from './components/Home';
+import Login from './components/Login';
+import Stadium from './components/Stadium';
+import MyReservations from './components/MyReservations';
+import DeleteStadiums from './components/DeleteStadiums';
+
 function App() {
   return (
     <Router>
