@@ -18,6 +18,7 @@
 .navbar .logo {
   width: 100%;
 }
+
 .navbar .logo img {
   margin-inline: auto;
   width: calc(100% - 2em);

@@ -31,7 +31,6 @@ const fetchItems = () => async (dispatch) => {
   } catch (error) {
     dispatch(getItemsFailure());
   }
-  console.log(items);
 };
 
 // Initial State
