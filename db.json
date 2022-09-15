@@ -1,0 +1,97 @@
+{
+  "stadiums": [
+    {
+      "name": "Stadium 1",
+      "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+      "country": "United States",
+      "seats": 15000
+    },
+    {
+      "name": "Stadium 2",
+      "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+      "country": "Ecuador",
+      "seats": 15000
+    },
+    {
+      "name": "Stadium 3",
+      "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+      "country": "Spain",
+      "seats": 15000
+    }
+  ],
+
+  "stadium": {
+    "name": "Stadium 1",
+    "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+    "country": "United States",
+    "seats": 15000,
+    "games": [
+      {
+        "team_a": "United States",
+        "team_b": "Spain",
+        "date": "2022-09-16"
+      },
+      {
+        "team_a": "United States",
+        "team_b": "Spain",
+        "date": "2022-09-17"
+      },
+      {
+        "team_a": "United States",
+        "team_b": "Spain",
+        "date": "2022-09-18"
+      }
+    ]
+  },
+
+  "reservations": [
+    {
+      "user": {
+      "name": "Someone"
+      },
+      "stadium": {
+        "name": "Stadium 1",
+        "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+        "country": "United States",
+        "seats": 15000
+      },
+      "game": {
+        "team_a": "United States",
+        "team_b": "Spain",
+        "date": "2022-09-18"
+      }
+    },
+    {
+      "user": {
+      "name": "Someone 2"
+      },
+      "stadium": {
+        "name": "Stadium 1",
+        "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+        "country": "United States",
+        "seats": 15000
+      },
+      "game": {
+        "team_a": "United States",
+        "team_b": "Spain",
+        "date": "2022-09-18"
+      }
+    },
+    {
+      "user": {
+      "name": "Someone 3"
+      },
+      "stadium": {
+        "name": "Stadium 1",
+        "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
+        "country": "United States",
+        "seats": 15000
+      },
+      "game": {
+        "team_a": "United States",
+        "team_b": "Spain",
+        "date": "2022-09-18"
+      }
+    }
+  ]
+}
