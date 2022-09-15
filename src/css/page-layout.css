@@ -1,0 +1,9 @@
+.App {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.App .page-body {
+  flex-grow: 1;
+}

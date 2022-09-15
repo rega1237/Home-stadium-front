@@ -23,9 +23,10 @@ const getItemsFailure = () => ({
 // Thunk
 const fetchItems = () => async (dispatch) => {
   dispatch(getItems());
+  let items = [];
   try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-    const items = response.data.item;
+    const response = await axios.get('http://localhost:3000/stadiums');
+    items = response.data;
     dispatch(getItemsSuccess(items));
   } catch (error) {
     dispatch(getItemsFailure());
