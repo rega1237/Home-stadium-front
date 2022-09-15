@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
-import homeReducer from "./homereducer/homereducer";
-import logger from "redux-logger";
+import { configureStore } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
+import homeReducer from './homereducer/homereducer';
 
 const store = configureStore({
   reducer: {
