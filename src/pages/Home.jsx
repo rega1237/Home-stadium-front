@@ -4,7 +4,7 @@ import { fetchItems } from '../redux/homereducer/homereducer';
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { items } = useSelector(state => state.home);
+  const { items } = useSelector((state) => state.home);
 
   useEffect(() => {
     dispatch(fetchItems());
@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div>
-      { items.map(item => (
+      { items.map((item) => (
         <div key={item.id}>
           <h1>{item.name}</h1>
           <img src={item.img} alt={item.name} />
