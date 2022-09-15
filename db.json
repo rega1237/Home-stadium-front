@@ -1,18 +1,21 @@
 {
   "stadiums": [
     {
+      "id": 1,
       "name": "Stadium 1",
       "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
       "country": "United States",
       "seats": 15000
     },
     {
+      "id": 2,
       "name": "Stadium 2",
       "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
       "country": "Ecuador",
       "seats": 15000
     },
     {
+      "id": 3,
       "name": "Stadium 3",
       "img": "https://w0.peakpx.com/wallpaper/89/864/HD-wallpaper-antalya-arena-turkish-football-stadium-night-view-from-above-antalya-turkey-antalyaspor-stadium-new-football-stadiums-europe-antalyaspor-centennial-arena.jpg",
       "country": "Spain",
