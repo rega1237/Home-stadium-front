@@ -23,11 +23,11 @@ const getStadiumFailure = () => ({
 // Thunk
 const fetchStadium = () => async (dispatch) => {
   dispatch(getStadium());
-  let items = [];
+  let stadium = {};
   try {
     const response = await axios.get('http://localhost:3000/stadium');
-    items = response.data;
-    dispatch(getStadiumSuccess(items));
+    stadium = response.data;
+    dispatch(getStadiumSuccess(stadium));
   } catch (error) {
     dispatch(getStadiumFailure());
   }

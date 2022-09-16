@@ -8,7 +8,7 @@ import './css/reset.css';
 import './css/page-layout.css';
 
 import Home from './pages/Home';
-import Stadium from './pages/Stadium';
+import Stadium from './pages/Stadium/Stadium';
 // import Login from './components/Login';
 // import MyReservations from './components/MyReservations';
 // import DeleteStadiums from './components/DeleteStadiums';
