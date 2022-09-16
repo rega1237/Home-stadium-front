@@ -1,14 +1,15 @@
 .image-feather {
+  position: relative;
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 40em;
-  position: relative;
   aspect-ratio: 4/3;
   overflow: hidden;
   outline: 8px solid white;
   outline-offset: -1px;
   border-radius: 50%;
   box-shadow: 0 0 1em 2em white;
+  z-index: -1;
 }
 
 .image-feather::after {

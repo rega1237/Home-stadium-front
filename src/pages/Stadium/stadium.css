@@ -1,19 +1,7 @@
 .stadium-wrapper {
-  padding: 1em;
+  padding: 2em;
   padding-top: 5em;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5em;
 }
-
-.stadium-data {
-  flex-shrink: 1;
-  flex-grow: 1;
-  flex-basis: 20em;
-  max-width: 320px;
-}
-
-.games-list {
-  
-}
-

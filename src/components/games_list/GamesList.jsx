@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './games-list.css';
 
 const GamesList = (props) => {
   const { games } = props;
@@ -9,8 +10,12 @@ const GamesList = (props) => {
       { games?.map((game) => (
         <li key={game.id}>
           <h6>{game.team_a}</h6>
+          <span>Vs</span>
           <h6>{game.team_b}</h6>
           <input type="date" value={game.date} />
+          <button type="button">
+            Reserve
+          </button>
         </li>
       ))}
     </ul>

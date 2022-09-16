@@ -37,14 +37,14 @@
       },
       {
         "id": 2,
-        "team_a": "United States",
-        "team_b": "Spain",
+        "team_a": "Japan",
+        "team_b": "Alemania",
         "date": "2022-09-17"
       },
       {
         "id": 3,
-        "team_a": "United States",
-        "team_b": "Spain",
+        "team_a": "Brazil",
+        "team_b": "Portugal",
         "date": "2022-09-18"
       }
     ]
