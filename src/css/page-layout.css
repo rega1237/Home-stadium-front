@@ -4,6 +4,9 @@
   width: 100%;
 }
 
-.App .page-body {
-  flex-grow: 1;
+@media (min-width: 1040px) { 
+  .App .page-body {
+    flex-grow: 1;
+  }
 }
+
