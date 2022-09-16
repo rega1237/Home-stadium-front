@@ -1,11 +1,14 @@
 .App {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
   width: 100%;
 }
 
 @media (min-width: 1040px) {
   .App .page-body {
     flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30em;
   }
 }

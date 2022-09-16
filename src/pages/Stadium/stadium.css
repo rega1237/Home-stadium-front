@@ -1,0 +1,7 @@
+.stadium-wrapper {
+  padding: 2em;
+  padding-top: 5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
