@@ -129,7 +129,7 @@
     position: sticky;
     border-right: 1px solid #ddd;
   }
-  
+
   .menu-button {
     display: none;
   }
@@ -141,12 +141,11 @@
   .navbar .logo img {
     width: calc(100% - 2em);
   }
-  
+
   .links {
-    max-width: auto;
     margin-left: auto;
   }
-  
+
   .links li a {
     text-align: left;
   }
