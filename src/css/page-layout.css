@@ -1,11 +1,11 @@
-.App {
+.total-app {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
 }
 
 @media (min-width: 1040px) {
-  .App .page-body {
+  .total-app .page-body {
     flex-grow: 1;
   }
 }

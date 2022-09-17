@@ -7,7 +7,7 @@ import {
 import './css/reset.css';
 import './css/page-layout.css';
 
-import Home from './pages/Home';
+import Home from './pages/home/Home';
 // import Login from './components/Login';
 // import Stadium from './components/Stadium';
 // import MyReservations from './components/MyReservations';
@@ -17,7 +17,7 @@ import Navbar from './components/navbar/Navbar';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="total-app">
         <Navbar />
         <div className="page-body">
           <Routes>
