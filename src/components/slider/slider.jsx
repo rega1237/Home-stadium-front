@@ -31,15 +31,15 @@ const Sliders = () => {
     >
       {items.map((item) => (
         <SwiperSlide key={item.id}>
-          <div className="card">
-            <Link to="/stadium/:id" >
-              <img src={item.img} alt="stadium" className="slider-pic" />
-            </Link>
-            <div className="card-body">
-              <h3>Name: {item.name}</h3>
-              <p>Seats: {item.seats}</p>
+          <Link to="/stadium/:id" >
+            <div className="card">
+                <img src={item.img} alt="stadium" className="slider-pic" />
+              <div className="card-body">
+                <h3>Name: {item.name}</h3>
+                <p>Seats: {item.seats}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
