@@ -1,18 +1,28 @@
-.slider {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: gray;
-}
-
-.slick-list {
-  width: 70vw;
-}
-
 .slider-pic {
-  width: 15rem;;
+  width: 200px;
   margin: auto;
+  padding: 20px;
+}
+
+.card {
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+  height: 250px;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  z-index: 99;
 }
