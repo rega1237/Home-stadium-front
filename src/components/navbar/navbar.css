@@ -40,7 +40,7 @@
   width: 100%;
   min-height: 100vh;
   max-height: 100vh;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   background-color: white;
@@ -121,12 +121,14 @@
 
 @media (min-width: 1040px) {
   .navbar {
+    width: 17%;
     margin-left: 0;
+    margin-right: 0;
     opacity: 1;
     flex-shrink: 1;
     flex-grow: 0;
     flex-basis: 15em;
-    position: sticky;
+    position: relative;
     border-right: 1px solid #ddd;
   }
 
