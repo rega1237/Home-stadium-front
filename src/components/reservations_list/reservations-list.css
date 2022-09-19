@@ -63,7 +63,7 @@ li:nth-child(even) {
   cursor: pointer;
 }
 
- li:nth-child(even) .date-picker {
+li:nth-child(even) .date-picker {
   background-color: #bababa;
 }
 
@@ -92,6 +92,7 @@ li:nth-child(odd) .date-picker:focus {
   cursor: pointer;
   background-color: rgb(243, 89, 89);
 }
+
 .cancel-button:active {
   background-color: rgb(211, 47, 47);
 }
