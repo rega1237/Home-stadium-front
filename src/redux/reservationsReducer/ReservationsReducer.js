@@ -48,7 +48,7 @@ const reservationsReducer = (state = initialState, action) => {
     case GET_RESERVATIONS_SUCCESS:
       return {
         ...state,
-        items: action.payload,
+        reservations: action.payload,
       };
     case GET_RESERVATIONS_FAILURE:
       return {
