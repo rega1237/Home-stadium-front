@@ -7,7 +7,6 @@ import {
 import './css/reset.css';
 import './css/page-layout.css';
 
-
 import Home from './pages/home/Home';
 import Stadium from './pages/Stadium/Stadium';
 
