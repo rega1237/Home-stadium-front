@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchReservations } from '../../redux/reservationsReducer/ReservationsReducer';
+import ReservationsList from '../../components/reservations_list/ReservationsList';
 import './my-reservations.css';
 
 const MyReservations = () => {
@@ -9,12 +10,15 @@ const MyReservations = () => {
 
   useEffect(() => {
     dispatch(fetchReservations());
-    console.log(reservations);
   }, [dispatch]);
 
   return (
     <section className="page-wrapper">
-      <h1>{reservations?.length}</h1>
+      <h1>
+        {`${reservations.user?.name}'s reservations`}
+      </h1>
+
+      <ReservationsList reservations={reservations?.reservations} />
     </section>
   );
 };

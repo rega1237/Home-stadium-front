@@ -1,0 +1,97 @@
+.table {
+  display: table;
+  margin-inline: auto;
+  width: calc(100% - 2em);
+  max-width: 1000px;
+}
+
+.table-row {
+  display: table-row;
+  width: 100%;
+  background-color: #ddd;
+}
+
+.table-row span,
+.table-row p,
+.table-row h5,
+.table-row div {
+  display: table-cell;
+  font-size: 0.8em;
+  padding: 1em;
+  font-weight: 300;
+}
+
+.tb-row-medium {
+  width: 4.6em;
+}
+
+.table-header span,
+.table-header h5 {
+  background-color: #bababa;
+  color: #494949;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-left: none;
+}
+
+.table-header {
+  position: sticky;
+  top: 0;
+  font-weight: 600;
+}
+
+li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.vs {
+  width: 2em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.date-picker {
+  padding: 0.5em;
+  font-size: 0.7em;
+  border: none;
+  border-radius: 1em;
+}
+
+.date-picker:hover {
+  cursor: pointer;
+}
+
+ li:nth-child(even) .date-picker {
+  background-color: #bababa;
+}
+
+li:nth-child(odd) .date-picker {
+  background-color: #ccc;
+}
+
+li:nth-child(even) .date-picker:focus {
+  outline: 1px solid #888;
+}
+
+li:nth-child(odd) .date-picker:focus {
+  outline: 1px solid #aaa;
+}
+
+.cancel-button {
+  border: none;
+  font-size: 0.8em;
+  padding: 0.7em;
+  border-radius: 0.3em;
+  background-color: rgb(226, 68, 68);
+  color: white;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  background-color: rgb(243, 89, 89);
+}
+.cancel-button:active {
+  background-color: rgb(211, 47, 47);
+}
