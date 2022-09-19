@@ -1,17 +1,9 @@
-.App {
+.total-app {
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App .page-body {
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-@media (min-width: 1040px) {
-  .App .page-body {
-    flex-basis: 30em;
-  }
+.page-body {
+  width: calc(100% - 239px);
 }
