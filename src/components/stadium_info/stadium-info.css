@@ -1,0 +1,43 @@
+.stadium-info {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 20em;
+  min-width: 350px;
+  display: flex;
+  gap: 1.5em;
+  flex-direction: column;
+}
+
+.stadium-info-header h2 {
+  margin-bottom: 0.3em;
+  text-align: right;
+  font-size: 2em;
+  font-weight: bold;
+  color: #494949;
+}
+
+.stadium-header-details {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+}
+
+.stadium-header-details span {
+  color: #505050;
+}
+
+.stadium-country {
+  color: #97bf0f;
+}
+
+.stadium-seats {
+  color: #bf0f0f;
+}
+
+@media (min-width: 1040px) {
+  .stadium-info {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}

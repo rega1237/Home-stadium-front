@@ -51,18 +51,21 @@
     "seats": 15000,
     "games": [
       {
+        "id": 1,
         "team_a": "United States",
         "team_b": "Spain",
         "date": "2022-09-16"
       },
       {
-        "team_a": "United States",
-        "team_b": "Spain",
+        "id": 2,
+        "team_a": "Japan",
+        "team_b": "Alemania",
         "date": "2022-09-17"
       },
       {
-        "team_a": "United States",
-        "team_b": "Spain",
+        "id": 3,
+        "team_a": "Brazil",
+        "team_b": "Portugal",
         "date": "2022-09-18"
       }
     ]
