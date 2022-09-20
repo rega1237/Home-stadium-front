@@ -4,6 +4,7 @@ import axios from 'axios';
 export const GET_ITEMS = 'FRONT-END/HOME-REDUCER/GET_ITEMS';
 export const GET_ITEMS_SUCCESS = 'FRONT-END/HOME-REDUCER/GET_ITEMS_SUCCESS';
 export const GET_ITEMS_FAILURE = 'FRONT-END/HOME-REDUCER/GET_ITEMS_FAILURE';
+export const DELETE_ITEM = 'FRONT-END/HOME-REDUCER/DELETE_ITEM';
 
 // Action Creators
 
@@ -20,6 +21,11 @@ const getItemsFailure = () => ({
   type: GET_ITEMS_FAILURE,
 });
 
+const deleteItemSuccess = (id) => ({
+  type: DELETE_ITEM,
+  payload: id,
+});
+
 // Thunk
 const fetchItems = () => async (dispatch) => {
   dispatch(getItems());
@@ -30,6 +36,15 @@ const fetchItems = () => async (dispatch) => {
     dispatch(getItemsSuccess(items));
   } catch (error) {
     dispatch(getItemsFailure());
+  }
+};
+
+const deleteItem = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`http://localhost:3000/stadiums/${id}`);
+    dispatch(deleteItemSuccess(id));
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -54,6 +69,11 @@ const homeReducer = (state = initialState, action) => {
       return {
         ...state,
       };
+    case DELETE_ITEM:
+      return {
+        ...state,
+        items: state.items.filter((item) => item.id !== action.payload),
+      };
     default:
       return state;
   }
@@ -66,4 +86,5 @@ export {
   getItems,
   getItemsSuccess,
   getItemsFailure,
+  deleteItem,
 };
