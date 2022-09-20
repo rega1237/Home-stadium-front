@@ -52,6 +52,7 @@
     "seats": 15000,
     "coming_games": [
       {
+        "game_id": 1,
         "teams": [
           {
             "name": "Barcelona",
@@ -66,6 +67,7 @@
         "aviable_seats": 5
       },
       {
+        "game_id": 2,
         "teams": [
           {
             "name": "Borussia Dortmund",
@@ -80,6 +82,7 @@
         "aviable_seats": 5
       },
       {
+        "game_id": 3,
         "teams": [
           {
             "name": "Borussia Dortmund1",
@@ -94,6 +97,7 @@
         "aviable_seats": 5
       },
       {
+        "game_id": 4,
         "teams": [
           {
             "name": "Borussia Dortmund2",
@@ -158,5 +162,44 @@
         }
       }
     ]
+  },
+
+  "game": {
+    "all_data": {
+      "game": {
+        "id": 1,
+        "date": "2023-06-01T00:00:00.000Z",
+        "stadium_id": 1,
+        "created_at": "2022-09-20T15:28:22.962Z",
+        "updated_at": "2022-09-20T15:28:22.962Z",
+        "available_seats": 5
+      },
+      "teams": [
+        {
+          "id": 1,
+          "name": "Barcelona",
+          "flag": "https://upload.wikimedia.org/wikipedia/sco/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png",
+          "created_at": "2022-09-20T15:28:22.817Z",
+          "updated_at": "2022-09-20T15:28:22.817Z"
+        },
+        {
+          "id": 2,
+          "name": "Bayern Munech",
+          "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg/2048px-Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg.png",
+          "created_at": "2022-09-20T15:28:22.866Z",
+          "updated_at": "2022-09-20T15:28:22.866Z"
+        }
+      ],
+      "stadium": {
+        "id": 1,
+        "name": "Camp Nou",
+        "country": "Spain",
+        "seats": 5,
+        "created_at": "2022-09-20T15:28:22.756Z",
+        "updated_at": "2022-09-20T15:28:22.756Z",
+        "photo": "https://i0.wp.com/footballpink.net/wp-content/uploads/2018/02/camp-nou-1.jpg?fit=1024%2C592&ssl=1"
+      },
+      "seats": 5
+    }
   }
 }

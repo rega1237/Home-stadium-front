@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 import './games-list.css';
 
 const GamesList = (props) => {
-  const { comingGames } = props;
+  const { comingGames, setIsModalOpen } = props;
+
+  const selectGame = (gameId) => {
+    console.log(gameId);
+    setIsModalOpen(true);
+  };
 
   return (
     <ul className="games-list">
       { comingGames?.map((game) => (
-        <li key={`${game.teams[0].name} ${game.teams[1].name}`}>
+        <li key={game.game_id}>
           <h6>
             <img src={game.teams[0].flag} alt={game.teams[0].name} />
             {game.teams[0].name}
@@ -19,7 +24,10 @@ const GamesList = (props) => {
             {game.teams[1].name}
           </h6>
           <input type="date" value={game.date.substring(0, 10)} className="date-picker" />
-          <button type="button">
+          <button
+            type="button"
+            onClick={() => selectGame(game.game_id)}
+          >
             Reserve
           </button>
         </li>
@@ -30,6 +38,7 @@ const GamesList = (props) => {
 
 GamesList.propTypes = {
   comingGames: PropTypes.arrayOf(PropTypes.shape({
+    game_id: PropTypes.number,
     teams: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       flag: PropTypes.string,
@@ -37,6 +46,7 @@ GamesList.propTypes = {
     date: PropTypes.string,
     avialable_seats: PropTypes.number,
   })),
+  setIsModalOpen: PropTypes.func.isRequired,
 };
 
 GamesList.defaultProps = {
