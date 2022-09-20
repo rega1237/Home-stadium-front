@@ -9,6 +9,7 @@ import './css/page-layout.css';
 
 import Home from './pages/home/Home';
 import Stadium from './pages/Stadium/Stadium';
+import DeleteStadiumsPage from './pages/manageStadiums/DeleteStadiums';
 import MyReservations from './pages/MyReservations/MyReservations';
 
 // import DeleteStadiums from './components/DeleteStadiums';
@@ -23,6 +24,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/stadium/:id" element={<Stadium />} />
+            <Route path="/stadiums" element={<DeleteStadiumsPage />} />
+            {/* <Route path="/login" element={<Login />} />
             <Route path="/my-reservations" element={<MyReservations />} />
             {/* <Route path="/login" element={<Login />} />
             <Route path="/delete" element={<DeleteStadiums />} /> */}
