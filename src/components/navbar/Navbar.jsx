@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">My Reservations</Link>
+            <Link to="/my-reservations">My Reservations</Link>
           </li>
           <li>
             <Link to="/stadiums">Manage Stadiums</Link>

@@ -12,7 +12,7 @@ const GamesList = (props) => {
           <h6>{game.team_a}</h6>
           <span>Vs</span>
           <h6>{game.team_b}</h6>
-          <input type="date" value={game.date} />
+          <input type="date" value={game.date} className="date-picker" />
           <button type="button">
             Reserve
           </button>

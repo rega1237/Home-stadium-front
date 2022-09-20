@@ -1,0 +1,13 @@
+.page-wrapper {
+  padding: 2em;
+  min-height: 100vh;
+  padding-top: 5em;
+  background-image: url('../../assets/static/stadium-gradient.png');
+  background-position: bottom right;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+
+.table {
+  margin-top: 2em;
+}
