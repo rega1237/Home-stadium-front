@@ -14,6 +14,13 @@
   color: #494949;
 }
 
+.games-list h6 img {
+  max-width: 2em;
+  max-height: 2em;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
 .games-list li span {
   font-size: 0.8em;
   padding: 0.3em;

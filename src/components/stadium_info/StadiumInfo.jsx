@@ -17,36 +17,40 @@ const StadiumInfo = (props) => {
         <h5 className="stadium-header-details stadium-seats">
           <i className="fa fa-circle" aria-hidden="true" />
           <span>
-            Seats:
-            {stadium.seats}
+            {`Seats: ${stadium.seats}`}
           </span>
         </h5>
       </div>
 
-      <GamesList games={stadium.games} />
+      <GamesList comingGames={stadium.coming_games} />
     </aside>
   );
 };
 
 StadiumInfo.propTypes = {
   stadium: PropTypes.shape({
+    id: PropTypes.number,
     name: PropTypes.string,
     country: PropTypes.string,
     seats: PropTypes.number,
-    games: PropTypes.arrayOf(PropTypes.shape({
-      team_a: PropTypes.string,
-      team_b: PropTypes.string,
+    coming_games: PropTypes.arrayOf(PropTypes.shape({
+      teams: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        flag: PropTypes.string,
+      })),
       date: PropTypes.string,
+      avialable_seats: PropTypes.number,
     })),
   }),
 };
 
 StadiumInfo.defaultProps = {
   stadium: {
+    id: 0,
     name: '',
     country: '',
     seats: 0,
-    games: [],
+    coming_games: [],
   },
 };
 
