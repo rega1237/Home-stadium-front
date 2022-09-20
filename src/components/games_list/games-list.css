@@ -22,26 +22,26 @@
   color: #494949;
 }
 
-.games-list li input[type=date] {
+.date-picker {
   padding: 0.5em;
   font-size: 0.7em;
   border: none;
   border-radius: 1em;
 }
 
-.games-list li:nth-child(odd) input[type=date] {
+.games-list li:nth-child(odd) .date-picker {
   background-color: #bababa;
 }
 
-.games-list li:nth-child(even) input[type=date] {
+.games-list li:nth-child(even) .date-picker {
   background-color: #ddd;
 }
 
-.games-list li:nth-child(odd) input[type=date]:focus {
+.games-list li:nth-child(odd) .date-picker:focus {
   outline: 1px solid #888;
 }
 
-.games-list li:nth-child(even) input[type=date]:focus {
+.games-list li:nth-child(even) .date-picker:focus {
   outline: 1px solid #aaa;
 }
 

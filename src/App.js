@@ -9,9 +9,8 @@ import './css/page-layout.css';
 
 import Home from './pages/home/Home';
 import Stadium from './pages/Stadium/Stadium';
+import MyReservations from './pages/MyReservations/MyReservations';
 
-// import Login from './components/Login';
-// import MyReservations from './components/MyReservations';
 // import DeleteStadiums from './components/DeleteStadiums';
 import Navbar from './components/navbar/Navbar';
 
@@ -24,8 +23,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/stadium/:id" element={<Stadium />} />
-            {/* <Route path="/login" element={<Login />} />
             <Route path="/my-reservations" element={<MyReservations />} />
+            {/* <Route path="/login" element={<Login />} />
             <Route path="/delete" element={<DeleteStadiums />} /> */}
           </Routes>
         </div>
