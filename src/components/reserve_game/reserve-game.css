@@ -1,11 +1,8 @@
-.reserve-game {
-}
-
 .team-vs {
   position: relative;
   display: flex;
   width: 100%;
-  background-image: linear-gradient(0, rgb(32, 37, 51) 0%, rgb(59, 44, 44) );
+  background-image: linear-gradient(0deg, rgb(32, 37, 51) 0%, rgb(59, 44, 44));
   padding: 2em 1em;
 }
 
@@ -19,7 +16,7 @@
 
 .team-header img {
   width: 80%;
-  filter: drop-shadow(0 1em 1.5em #ffffff88);
+  filter: drop-shadow(0 1em 1.5em #fff8);
 }
 
 .team-header h2 {
@@ -28,7 +25,16 @@
   color: transparent;
   text-align: center;
   background-image: linear-gradient(90deg, rgb(112, 108, 150) 0%, rgb(153, 167, 202) 100%);
+  /* stylelint-disable csstree/validator */
   background-clip: text;
+  /* stylelint-enable csstree/validator */
+}
+
+.game-info-header div h2 {
+  margin-bottom: 0.3em;
+  font-size: 2em;
+  font-weight: bold;
+  color: #494949;
 }
 
 .team-header:nth-child(3) h2 {
@@ -52,8 +58,9 @@
   border-radius: 50%;
   transform: translateX(-55%);
   color: #cf0707;
-  text-shadow: -1px 2px white,
-  -4px 4px rgb(248, 127, 14);
+  text-shadow:
+    -1px 2px white,
+    -4px 4px rgb(248, 127, 14);
   background-image: url('../../assets/static/rays.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -88,13 +95,6 @@
 
 .game-info-header div {
   flex-grow: 1;
-}
-
-.game-info-header div h2 {
-  margin-bottom: 0.3em;
-  font-size: 2em;
-  font-weight: bold;
-  color: #494949;
 }
 
 .game-header-details {
