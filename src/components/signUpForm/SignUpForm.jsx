@@ -1,13 +1,34 @@
 import React, { Fragment } from "react";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+
 import "./signUpForm.css";
+
 
 const FormHook = () => {
 
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    formState: { errors },
+    handleSubmit
+  } = useForm({
+    mode: "onChange"
+  });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     console.log(data);
+    try {
+      const response = await axios.post('http://localhost:3000/users', {user: data});
+      if (response.status === 201) {
+        alert('User created successfully');
+      }
+    } catch (error) {
+      if (error.response.status === 422) {
+        alert('User already exists');
+      } else if (error.response.status === 500) {
+        alert('Server error');
+      }
+    }
   };
   return (
     <Fragment>
@@ -26,8 +47,8 @@ const FormHook = () => {
             },
           })}
         />
-        <p>{errors?.username?.message }</p>
-        <input type="submit" />
+        {errors.username && <p>{errors.username.message}</p>}
+        <input type="submit" value="Send" />
       </form>
     </Fragment>
   );
