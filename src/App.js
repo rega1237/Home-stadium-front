@@ -10,7 +10,7 @@ import './css/page-layout.css';
 import Home from './pages/home/Home';
 import Stadium from './pages/Stadium/Stadium';
 import DeleteStadiumsPage from './pages/manageStadiums/DeleteStadiums';
-import MyReservations from './pages/MyReservations/MyReservations';
+import SignUp from './pages/SignUp/SignUp';
 
 // import DeleteStadiums from './components/DeleteStadiums';
 import Navbar from './components/navbar/Navbar';
@@ -25,6 +25,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/stadium/:id" element={<Stadium />} />
             <Route path="/stadiums" element={<DeleteStadiumsPage />} />
+            <Route path="/signup" element={<SignUp />} />
             {/* <Route path="/login" element={<Login />} />
             <Route path="/my-reservations" element={<MyReservations />} />
             {/* <Route path="/login" element={<Login />} />
