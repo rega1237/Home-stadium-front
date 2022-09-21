@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { fetchGame } from '../../redux/selectedGameReducer/SelectedGameReducer';
 import './games-list.css';
 
 const GamesList = (props) => {
   const { comingGames, setIsModalOpen } = props;
+  const dispatch = useDispatch();
 
   const selectGame = (gameId) => {
     console.log(gameId);
+    dispatch(fetchGame());
     setIsModalOpen(true);
   };
 

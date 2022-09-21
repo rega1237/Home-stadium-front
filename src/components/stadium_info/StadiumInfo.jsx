@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import GamesList from '../games_list/GamesList';
 import Modal from '../modal/Modal';
+import ReserveGame from '../reserve_game/ReserveGame';
 import './stadium-info.css';
 
 const StadiumInfo = (props) => {
   const { stadium } = props;
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -36,7 +37,7 @@ const StadiumInfo = (props) => {
         setIsModalOpen={setIsModalOpen}
       >
         <div>
-          <GamesList comingGames={stadium.coming_games} />
+          <ReserveGame />
         </div>
       </Modal>
     </>
