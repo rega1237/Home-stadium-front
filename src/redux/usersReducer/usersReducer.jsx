@@ -3,6 +3,7 @@ import axios from 'axios';
 //actions
 const SIGN_IN_SUCCESS = 'USER/SIGN_IN_SUCCESS';
 const SIGN_IN_FAILURE = 'USER/SIGN_IN_FAILURE';
+const GET_USER = 'USER/GET_USER';
 
 //action creators
 
@@ -16,9 +17,14 @@ const signInFailure = (error) => ({
   payload: error
 });
 
+const getUser = () => ({
+  type: GET_USER
+});
+
 const fetchLogIn = (user) => async (dispatch) => {
   try {
-    const response = await axios.post('http://localhost:3000/auth/login', {username: user});
+    const response = await axios.post('http://localhost:3000/auth/login', { username: user });
+    console.log(response.data);
     dispatch(signInSuccess(response.data));
   } catch (error) {
     dispatch(signInFailure(error));
@@ -43,11 +49,21 @@ const usersReducer = (state = initialState, action) => {
         ...state,
         error: action.payload
       };
+    case GET_USER:
+      return {
+        ...state,
+      };
     default:
       return state;
   }
-}
+};
+
+
+
 
 export default usersReducer;
 
-export { fetchLogIn };
+export { 
+  fetchLogIn,
+  getUser 
+};

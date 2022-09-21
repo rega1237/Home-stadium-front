@@ -1,4 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getUser } from "../../redux/usersReducer/usersReducer";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
@@ -14,6 +16,16 @@ const FormHook = () => {
   } = useForm({
     mode: "onChange"
   });
+
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.users);
+
+  useEffect(() => {
+    dispatch(getUser());
+    if (user.token !== null) {
+      window.location.href = "/";
+    }
+  }, [dispatch, user]);
 
   const onSubmit = async (data) => {
     console.log(data);
