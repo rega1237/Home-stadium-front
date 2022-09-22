@@ -16,11 +16,13 @@ const LoginForm = () => {
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.users);
 
+
   useEffect(() => {
     dispatch(getUser());
-    if (user.token !== null) {
+    if (user.token !== undefined) {
       window.location.href = "/";
     }
+    console.log(user);
   }, [dispatch, user]);
 
   const onSubmit = (data) => {

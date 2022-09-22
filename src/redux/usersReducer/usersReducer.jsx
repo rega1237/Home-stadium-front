@@ -4,6 +4,7 @@ import axios from 'axios';
 const SIGN_IN_SUCCESS = 'USER/SIGN_IN_SUCCESS';
 const SIGN_IN_FAILURE = 'USER/SIGN_IN_FAILURE';
 const GET_USER = 'USER/GET_USER';
+const LOG_OUT = 'USER/LOG_OUT';
 
 //action creators
 
@@ -21,6 +22,10 @@ const getUser = () => ({
   type: GET_USER
 });
 
+const logout = () => ({
+  type: LOG_OUT
+});
+
 const fetchLogIn = (user) => async (dispatch) => {
   try {
     const response = await axios.post('http://localhost:3000/auth/login', { username: user });
@@ -33,7 +38,10 @@ const fetchLogIn = (user) => async (dispatch) => {
 
 //initial state
 const initialState = {
-  user: {},
+  user: {
+    login: false,
+  },
+  
 };
 
 //reducer
@@ -42,7 +50,8 @@ const usersReducer = (state = initialState, action) => {
     case SIGN_IN_SUCCESS:
       return {
         ...state,
-        user: action.payload
+        user: action.payload,
+        login: true,
       };
     case SIGN_IN_FAILURE:
       return {
@@ -52,6 +61,10 @@ const usersReducer = (state = initialState, action) => {
     case GET_USER:
       return {
         ...state,
+      };
+    case LOG_OUT:
+      return {
+        ...initialState,
       };
     default:
       return state;
@@ -65,5 +78,6 @@ export default usersReducer;
 
 export { 
   fetchLogIn,
-  getUser 
+  getUser,
+  logout
 };

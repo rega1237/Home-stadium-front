@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import Sliders from '../../components/slider/slider';
 import './home.css';
 
 
 const Home = () => {
+
+  const { user } = useSelector((state) => state.users);
+
+  useEffect(() => {
+    if (user.token === undefined) {
+      window.location.href = '/login';
+    }
+  }, [user]);
+
  
   return (
     <div className="home">

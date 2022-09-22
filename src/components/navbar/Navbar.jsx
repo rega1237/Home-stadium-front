@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { logout } from '../../redux/usersReducer/usersReducer';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 
@@ -7,6 +9,12 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuState(!isMenuActive);
+  };
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout());
   };
 
   return (
@@ -30,7 +38,7 @@ const Navbar = () => {
             <Link to="/stadiums">Manage Stadiums</Link>
           </li>
           <li>
-            <Link to="/logout">Logout</Link>
+            <a href="" onClick={ () => handleLogout() }>Log Out</a>
           </li>
         </ul>
         <div className="social-media">
