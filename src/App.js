@@ -6,6 +6,7 @@ import {
 
 import './css/reset.css';
 import './css/page-layout.css';
+import './css/globals.css';
 
 import Home from './pages/home/Home';
 import Stadium from './pages/Stadium/Stadium';
