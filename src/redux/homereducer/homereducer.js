@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 // ACTIONS
 export const GET_ITEMS = 'FRONT-END/HOME-REDUCER/GET_ITEMS';
 export const GET_ITEMS_SUCCESS = 'FRONT-END/HOME-REDUCER/GET_ITEMS_SUCCESS';
@@ -27,11 +28,15 @@ const deleteItemSuccess = (id) => ({
 });
 
 // Thunk
-const fetchItems = () => async (dispatch) => {
+const fetchItems = (token) => async (dispatch) => {
   dispatch(getItems());
   let items = [];
   try {
-    const response = await axios.get('http://localhost:3000/stadiums');
+    const response = await axios.get('http://localhost:3000/stadiums', {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+  });
     items = response.data;
     dispatch(getItemsSuccess(items));
   } catch (error) {
