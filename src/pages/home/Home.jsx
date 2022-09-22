@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import Sliders from '../../components/slider/slider';
 import Modal from '../../components/modal/Modal';
 import CreateStadium from '../../components/createStadium/CreateStadium';
 import './home.css';
 
 const Home = () => {
+
+  const { user } = useSelector((state) => state.users);
+
+  useEffect(() => {
+    if (user.token === undefined) {
+      window.location.href = '/login';
+    }
+  }, [user]);
+
   const [isModalOpen, setIsModalOpen] = useState(true);
 
   return (
