@@ -25,6 +25,7 @@
 }
 
 .preview-container .image-no-image {
+  width: 100%;
   opacity: 0.3;
   transition: 0.1s ease-out;
 }
@@ -33,10 +34,6 @@
   opacity: 1;
   cursor: pointer;
   transform: scale(1.02);
-}
-
-.preview-container .image-no-image {
-  width: 100%;
 }
 
 .preview-container .image-preview {
