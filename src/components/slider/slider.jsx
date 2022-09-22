@@ -12,9 +12,11 @@ import 'swiper/css/pagination';
 const Sliders = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.home);
+  const { user } = useSelector((state) => state.users);
+  console.log(items);
 
   useEffect(() => {
-    dispatch(fetchItems());
+    dispatch(fetchItems(user.token));
   }, [dispatch]);
 
   return (
@@ -33,7 +35,7 @@ const Sliders = () => {
         <SwiperSlide key={item.id}>
           <Link to="/stadium/:id">
             <div className="card">
-              <img src={item.img} alt="stadium" className="slider-pic" />
+              <img src={item.photo} alt="stadium" className="slider-pic" />
               <div className="card-body">
                 <h3>
                   Name:
