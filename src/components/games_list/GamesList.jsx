@@ -1,16 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { fetchGame } from '../../redux/selectedGameReducer/SelectedGameReducer';
 import './games-list.css';
 
 const GamesList = (props) => {
   const { comingGames, setIsModalOpen } = props;
+  const { user } = useSelector((state) => state.users);
   const dispatch = useDispatch();
+  const { id } = useParams();
 
   const selectGame = (gameId) => {
-    console.log(gameId);
-    dispatch(fetchGame());
+    dispatch(fetchGame(user.token, id, gameId));
     setIsModalOpen(true);
   };
 
