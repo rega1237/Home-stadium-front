@@ -1,13 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchItems } from '../../redux/homereducer/homereducer';
-import { Link } from "react-router-dom";
-import "./slider.css";
+import './slider.css';
 import 'swiper/css';
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Sliders = () => {
   const dispatch = useDispatch();
@@ -21,9 +21,9 @@ const Sliders = () => {
     <Swiper
       spaceBetween={20}
       slidesPerView={3}
-      navigation={true}
-      loop={true}
-      modules={[Navigation, Pagination]} 
+      navigation
+      loop
+      modules={[Navigation, Pagination]}
       className="mySwiper"
       pagination={{
         clickable: true,
@@ -31,12 +31,20 @@ const Sliders = () => {
     >
       {items.map((item) => (
         <SwiperSlide key={item.id}>
-          <Link to="/stadium/:id" >
+          <Link to="/stadium/:id">
             <div className="card">
-                <img src={item.img} alt="stadium" className="slider-pic" />
+              <img src={item.img} alt="stadium" className="slider-pic" />
               <div className="card-body">
-                <h3>Name: {item.name}</h3>
-                <p>Seats: {item.seats}</p>
+                <h3>
+                  Name:
+                  {' '}
+                  {item.name}
+                </h3>
+                <p>
+                  Seats:
+                  {' '}
+                  {item.seats}
+                </p>
               </div>
             </div>
           </Link>
