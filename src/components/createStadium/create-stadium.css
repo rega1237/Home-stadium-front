@@ -1,0 +1,94 @@
+.image-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1em 0;
+  margin-bottom: 1.5em;
+  background-image: linear-gradient(0deg, rgb(32, 37, 51) 0%, rgb(59, 44, 44));
+  height: 20em;
+  overflow: hidden;
+}
+
+.image-input input[type=file] {
+  display: none;
+}
+
+.preview-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s ease-out;
+}
+
+.preview-container .image-no-image {
+  width: 100%;
+  opacity: 0.3;
+  transition: 0.1s ease-out;
+}
+
+.preview-container:hover img {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.preview-container .image-preview {
+  flex-grow: 1;
+  max-height: 18em;
+}
+
+.input-fields {
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.input-fields input {
+  flex-grow: 1;
+  padding: 0.8em;
+  border: none;
+  border-radius: 0.3em;
+  outline: 1px solid #aaa;
+  transition: 0.1s ease-in;
+}
+
+.input-fields input[type=number] {
+  appearance: textfield;
+}
+
+.input-fields input:hover,
+.input-fields input:focus {
+  outline: 2px solid #97bf0f;
+}
+
+.create-stadium form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.submit-stadium {
+  position: relative;
+  padding: 1em;
+  width: 11em;
+  margin-bottom: 2em;
+  margin-inline: auto;
+  background-color: #117ce0;
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+}
+
+.submit-stadium:hover {
+  background-color: #3b99f1;
+  cursor: pointer;
+}
+
+.submit-stadium:active {
+  background-color: #0762b8;
+}
