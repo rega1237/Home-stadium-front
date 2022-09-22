@@ -1,19 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { fetchGame } from '../../redux/selectedGameReducer/SelectedGameReducer';
 import './games-list.css';
 
 const GamesList = (props) => {
-  const { games } = props;
+  const { comingGames, setIsModalOpen } = props;
+  const dispatch = useDispatch();
+
+  const selectGame = (gameId) => {
+    console.log(gameId);
+    dispatch(fetchGame());
+    setIsModalOpen(true);
+  };
 
   return (
     <ul className="games-list">
-      { games?.map((game) => (
-        <li key={game.id}>
-          <h6>{game.team_a}</h6>
+      { comingGames?.map((game) => (
+        <li key={game.game_id}>
+          <h6>
+            <img src={game.teams[0].flag} alt={game.teams[0].name} />
+            {game.teams[0].name}
+          </h6>
           <span>Vs</span>
-          <h6>{game.team_b}</h6>
-          <input type="date" value={game.date} className="date-picker" />
-          <button type="button">
+          <h6>
+            <img src={game.teams[1].flag} alt={game.teams[1].name} />
+            {game.teams[1].name}
+          </h6>
+          <input type="date" value={game.date.substring(0, 10)} className="date-picker" />
+          <button
+            type="button"
+            onClick={() => selectGame(game.game_id)}
+          >
             Reserve
           </button>
         </li>
@@ -23,15 +41,20 @@ const GamesList = (props) => {
 };
 
 GamesList.propTypes = {
-  games: PropTypes.arrayOf(PropTypes.shape({
-    team_a: PropTypes.string,
-    team_b: PropTypes.string,
+  comingGames: PropTypes.arrayOf(PropTypes.shape({
+    game_id: PropTypes.number,
+    teams: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      flag: PropTypes.string,
+    })),
     date: PropTypes.string,
+    avialable_seats: PropTypes.number,
   })),
+  setIsModalOpen: PropTypes.func.isRequired,
 };
 
 GamesList.defaultProps = {
-  games: [],
+  comingGames: [],
 };
 
 export default GamesList;
