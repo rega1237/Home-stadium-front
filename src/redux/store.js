@@ -1,8 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware, combineReducers } from '@reduxjs/toolkit';
 import storage from 'redux-persist/lib/storage';
-import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
-import { getDefaultMiddleware } from '@reduxjs/toolkit';
 import homeReducer from './homereducer/homereducer';
 import stadiumReducer from './stadiumReducer/StadiumReducer';
 import reservationsReducer from './reservationsReducer/ReservationsReducer';
@@ -13,15 +11,15 @@ const customizedMiddleware = getDefaultMiddleware({
 });
 
 const reducers = combineReducers({
-    home: homeReducer,
-    stadium: stadiumReducer,
-    reservations: reservationsReducer,
-    users: usersReducer,
+  home: homeReducer,
+  stadium: stadiumReducer,
+  reservations: reservationsReducer,
+  users: usersReducer,
 });
 
 const persistConfig = {
-    key: 'root',
-    storage,
+  key: 'root',
+  storage,
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
