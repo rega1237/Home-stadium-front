@@ -5,7 +5,7 @@ import CreateStadium from '../../components/createStadium/CreateStadium';
 import './home.css';
 
 const Home = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="home">

@@ -19,7 +19,7 @@
 .modal-hidden {
   background-color: #fff0;
   backdrop-filter: blur(0);
-  margin-top: 100%;
+  margin-top: 100vh;
 }
 
 .modal-content {
