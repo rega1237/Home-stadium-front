@@ -37,16 +37,25 @@ const Sliders = () => {
                 <img src={item.img} alt="stadium" className="slider-pic" />
               </div>
               <div className="card-body">
-                <h3>
-                  Name:
-                  {' '}
-                  {item.name}
-                </h3>
-                <p>
-                  Seats:
-                  {' '}
-                  {item.seats}
-                </p>
+                <div className="card-body-section">
+                  <h5>Stadium name</h5>
+                  <h3>
+                    {item.name}
+                  </h3>
+                  <h6>
+                    <i className="fa fa-map-marker" aria-hidden="true" />
+                    {item.country}
+                  </h6>
+                </div>
+                <div className="card-body-section">
+                  <h5>
+                    <i className="fa fa-circle" aria-hidden="true" />
+                    Seats
+                  </h5>
+                  <h3>
+                    {item.seats}
+                  </h3>
+                </div>
               </div>
             </div>
           </Link>
