@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../API/api_config';
 
 // ACTIONS
 export const GET_GAME = 'FRONT-END/SELECTED-GAME-REDUCER/GET_STADIUM';
@@ -21,11 +22,15 @@ const getGameFailure = () => ({
 });
 
 // Thunk
-const fetchGame = () => async (dispatch) => {
+const fetchGame = (token, stadiumId, gameId) => async (dispatch) => {
   dispatch(getGame());
   let game = {};
   try {
-    const response = await axios.get('http://localhost:3000/game');
+    const response = await axios.get(`${BASE_URL}stadiums/${stadiumId}/games/${gameId}`, {
+      headers: {
+        Authorization: token,
+      },
+    });
     game = response.data;
     dispatch(getGameSuccess(game));
   } catch (error) {
