@@ -28,9 +28,6 @@
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 8em;
-}
-
-.home-header button {
   background-color: #97bf0f;
   color: white;
   border: none;
