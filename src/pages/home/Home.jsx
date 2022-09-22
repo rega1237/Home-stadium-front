@@ -9,16 +9,19 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="title">
-        <h1>STADIUMS</h1>
-        <p>Please select one Stadium reservation</p>
+      <div className="home-header">
+        <div className="title">
+          <h1>STADIUMS</h1>
+          <p>Here&apos;s a list of stadiums</p>
+          <h4>Click one to see more details</h4>
+        </div>
+        <button type="button" onClick={() => setIsModalOpen(true)}>
+          Add Stadium
+        </button>
       </div>
       <div className="slider-container">
         <Sliders />
       </div>
-      <button type="button" onClick={() => setIsModalOpen(true)}>
-        Add Stadium
-      </button>
       <Modal
         title="Add Stadium"
         open={isModalOpen}
