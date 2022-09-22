@@ -12,6 +12,7 @@ import Stadium from './pages/Stadium/Stadium';
 import DeleteStadiumsPage from './pages/manageStadiums/DeleteStadiums';
 import SignUp from './pages/SignUp/SignUp';
 import Login from './pages/Login/Login';
+import MyReservations from './pages/MyReservations/MyReservations';
 
 // import DeleteStadiums from './components/DeleteStadiums';
 import Navbar from './components/navbar/Navbar';
