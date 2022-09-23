@@ -21,6 +21,7 @@
 }
 
 .team-header h2 {
+  align-self: flex-end;
   width: 100%;
   margin-top: 0.5em;
   font-weight: bold;
@@ -49,24 +50,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: 900;
   font-style: italic;
   width: 40%;
-  min-width: 2em;
   aspect-ratio: 1/1;
   margin-left: 50%;
   margin-top: 0;
   border-radius: 50%;
-  transform: translateX(-55%);
+  transform: translateX(-63%);
   color: #cf0707;
   text-shadow:
-    -1px 2px white,
-    -4px 4px rgb(248, 127, 14);
+  -1px 2px white,
+  -4px 4px rgb(248, 127, 14);
   background-image: url('../../assets/static/rays.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 110%;
+}
+
+@media (min-width: 380px) {
+  .vs-badge {
+    font-size: 4em;
+    transform: translateX(-57%);
+  }
 }
 
 .vs-badge span {
@@ -151,4 +158,114 @@
 
 .reserve-form button:active {
   background-color: #90b126;
+}
+
+.reserve-form button:disabled {
+  background-color: #eee;
+  color: #ddd;
+}
+
+.reserve-game {
+  position: relative;
+}
+
+.error-message {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(-3.5em);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 0.5em 1em;
+  background-color: #ffe389;
+  color: orangered;
+  transition: 0.4s ease-in;
+  font-size: 0.8em;
+}
+
+.error-message.show {
+  animation: errorMessage 1s linear;
+}
+
+.error-message:hover.show {
+  animation-play-state: paused;
+}
+
+.reserve-form button.done {
+  animation: req200 1s linear;
+}
+
+.reserve-form button.error {
+  animation: reqError 1s linear;
+}
+
+@keyframes errorMessage {
+  0% {
+    transform: translateY(-3.5em);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(-1.1em);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-1.1em);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes req200 {
+  0% {
+    color: white;
+    background-image: none;
+    background-color: white;
+  }
+  25% {
+    color: transparent;
+    background-color: white;
+    background-image: url('../../assets/static/check.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    color: transparent;
+    background-color: white;
+    background-image: url('../../assets/static/check.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    color: white;
+  }
+}
+
+@keyframes reqError {
+  0% {
+    color: white;
+    background-image: none;
+  }
+  25% {
+    background-color: white;
+    color: transparent;
+    background-image: url('../../assets/static/caution.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  75% {
+    background-color: white;
+    color: transparent;
+    background-image: url('../../assets/static/caution.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  100% {
+    color: white;
+  }
 }

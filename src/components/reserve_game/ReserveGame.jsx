@@ -1,13 +1,43 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { reserveGame } from '../../API/api_calls';
+import { fetchGame } from '../../redux/selectedGameReducer/SelectedGameReducer';
 import './reserve-game.css';
 
 const ReserveGame = () => {
   const state = useSelector((state) => state.selectedGame);
-  const submitRequest = (event) => {
+  const { user } = useSelector((state) => state.users);
+  const { id } = useParams();
+  const dispatch = useDispatch();
+  const [submitDisabled, setSubmitDisabled] = useState(false);
+  const [fetchDone, setFetchDone] = useState(false);
+  const [fetchError, setFetchError] = useState(false);
+  const [fetchMessage, setFetctMessage] = useState('');
+
+  const reserveSeats = async (event) => {
     event.preventDefault();
+    setSubmitDisabled(true);
     const seatQuantity = event.target.seats.value;
-    console.log(seatQuantity);
+    const reserveState = await reserveGame(user, state?.game?.all_data?.game.id, seatQuantity);
+
+    if (reserveState.state) {
+      dispatch(fetchGame(user.token, id, state?.game?.all_data?.game.id));
+      setFetchDone(true);
+      setTimeout(() => {
+        setFetchDone(false);
+      }, 1000);
+      setSubmitDisabled(false);
+      event.target.reset();
+    }
+    if (!reserveState.state) {
+      setFetchError(true);
+      setFetctMessage(reserveState.response.error);
+      setTimeout(() => {
+        setFetchError(false);
+      }, 1000);
+      setSubmitDisabled(false);
+    }
   };
 
   return (
@@ -59,7 +89,7 @@ const ReserveGame = () => {
               </h5>
             </div>
           </div>
-          <form className="reserve-form" onSubmit={(event) => submitRequest(event)}>
+          <form className="reserve-form" onSubmit={(event) => reserveSeats(event)}>
             <input
               type="number"
               name="seats"
@@ -67,8 +97,17 @@ const ReserveGame = () => {
               placeholder="0"
               required
             />
-            <button type="submit">Reserve</button>
+            <button
+              type="submit"
+              disabled={submitDisabled}
+              className={`${fetchDone ? 'done' : ''} ${fetchError ? 'error' : ''}`}
+            >
+              Reserve
+            </button>
           </form>
+          <p className={`error-message ${fetchError ? 'show' : ''}`}>
+            {fetchMessage}
+          </p>
         </div>
       </>
     )

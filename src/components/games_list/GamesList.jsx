@@ -18,26 +18,34 @@ const GamesList = (props) => {
 
   return (
     <ul className="games-list">
-      { comingGames?.map((game) => (
-        <li key={game.game_id}>
-          <h6>
-            <img src={game.teams[0].flag} alt={game.teams[0].name} />
-            {game.teams[0].name}
-          </h6>
-          <span>Vs</span>
-          <h6>
-            <img src={game.teams[1].flag} alt={game.teams[1].name} />
-            {game.teams[1].name}
-          </h6>
-          <input type="date" value={game.date.substring(0, 10)} className="date-picker" />
-          <button
-            type="button"
-            onClick={() => selectGame(game.game_id)}
-          >
-            Reserve
-          </button>
-        </li>
-      ))}
+      { comingGames?.map((game) => {
+        let gameToDisplay = null;
+        if (game != null) {
+          gameToDisplay = (
+            <li key={game.game_id}>
+              <h6>
+                <img src={game.teams[0].flag} alt={game.teams[0].name} />
+                {game.teams[0].name}
+              </h6>
+              <div className="vs-column">
+                <span>VS</span>
+              </div>
+              <h6>
+                <img src={game.teams[1].flag} alt={game.teams[1].name} />
+                {game.teams[1].name}
+              </h6>
+              <input type="date" value={game.date.substring(0, 10)} className="date-picker" />
+              <button
+                type="button"
+                onClick={() => selectGame(game.game_id)}
+              >
+                Reserve
+              </button>
+            </li>
+          );
+        }
+        return gameToDisplay;
+      })}
     </ul>
   );
 };

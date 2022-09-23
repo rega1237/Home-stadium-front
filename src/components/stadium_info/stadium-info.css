@@ -2,7 +2,6 @@
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 20em;
-  min-width: 350px;
   display: flex;
   gap: 1.5em;
   flex-direction: column;
