@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 // ACTIONS
 export const GET_ITEMS = 'FRONT-END/HOME-REDUCER/GET_ITEMS';
 export const GET_ITEMS_SUCCESS = 'FRONT-END/HOME-REDUCER/GET_ITEMS_SUCCESS';
@@ -36,7 +35,7 @@ const fetchItems = (token) => async (dispatch) => {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-  });
+    });
     items = response.data;
     dispatch(getItemsSuccess(items));
   } catch (error) {

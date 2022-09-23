@@ -1,23 +1,7 @@
 import axios from 'axios';
+import { fetchStadium } from '../stadiumReducer/StadiumReducer';
 
-const GET_GAMES = 'STADIUM/GET_GAMES';
-const GET_GAMES_SUCCESS = 'STADIUM/GET_GAMES_SUCCESS';
-const GET_GAMES_FAILURE = 'STADIUM/GET_GAMES_FAILURE';
 const ADD_GAME = 'STADIUM/ADD_GAME';
-
-const getGames = (id) => ({
-  type: GET_GAMES,
-  payload: id,
-});
-
-const getGamesSuccess = (games) => ({
-  type: GET_GAMES_SUCCESS,
-  payload: games,
-});
-
-const getGamesFailure = () => ({
-  type: GET_GAMES_FAILURE,
-});
 
 const addGame = (game) => ({
   type: ADD_GAME,
@@ -26,34 +10,19 @@ const addGame = (game) => ({
 
 // Thunk
 
-const fetchGames = (token, id) => async (dispatch) => {
-  dispatch(getGames());
-  let games = [];
-  try {
-    const response = await axios.get(`http://localhost:3001/stadium/${id}/games`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    games = response.data;
-    dispatch(getGamesSuccess(games));
-  } catch (error) {
-    dispatch(getGamesFailure());
-  }
-};
-
 const createGame = (token, id, game) => async (dispatch) => {
   try {
-    const response = await axios.post(`http://localhost:3001/stadium/${id}/games`, game, {
+    const response = await axios.post(`http://localhost:3000/stadiums/${id}/games`, { game: game }, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `${token}`,
       },
     });
     dispatch(addGame(response.data));
+    dispatch(fetchStadium(token, id));
   } catch (error) {
-    console.log(error);
+    console.log('error');
   }
-}
+};
 
 // Initial State
 const initialState = {
@@ -92,4 +61,5 @@ export default gamesReducer;
 export {
   fetchGames,
   createGame,
-}
+  addGame,
+};
