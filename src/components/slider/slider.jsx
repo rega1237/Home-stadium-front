@@ -13,7 +13,6 @@ const Sliders = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.home);
   const { user } = useSelector((state) => state.users);
-  console.log(items);
 
   useEffect(() => {
     dispatch(fetchItems(user.token));
