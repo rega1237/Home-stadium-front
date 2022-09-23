@@ -6,6 +6,7 @@ import stadiumReducer from './stadiumReducer/StadiumReducer';
 import reservationsReducer from './reservationsReducer/ReservationsReducer';
 import usersReducer from './usersReducer/usersReducer';
 import selectedGameReducer from './selectedGameReducer/SelectedGameReducer';
+import gamesReducer from './newGameReducer/newGameReducer';
 
 const customizedMiddleware = getDefaultMiddleware({
   serializableCheck: false,
@@ -17,6 +18,7 @@ const reducers = combineReducers({
   reservations: reservationsReducer,
   selectedGame: selectedGameReducer,
   users: usersReducer,
+  games: gamesReducer,
 });
 
 const persistConfig = {
