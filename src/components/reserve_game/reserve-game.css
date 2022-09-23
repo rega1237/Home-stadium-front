@@ -61,8 +61,8 @@
   transform: translateX(-63%);
   color: #cf0707;
   text-shadow:
-  -1px 2px white,
-  -4px 4px rgb(248, 127, 14);
+    -1px 2px white,
+    -4px 4px rgb(248, 127, 14);
   background-image: url('../../assets/static/rays.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -204,14 +204,17 @@
     transform: translateY(-3.5em);
     opacity: 0;
   }
+
   10% {
     transform: translateY(-1.1em);
     opacity: 1;
   }
+
   80% {
     transform: translateY(-1.1em);
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
@@ -223,6 +226,7 @@
     background-image: none;
     background-color: white;
   }
+
   25% {
     color: transparent;
     background-color: white;
@@ -231,6 +235,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   75% {
     color: transparent;
     background-color: white;
@@ -239,6 +244,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   100% {
     color: white;
   }
@@ -249,6 +255,7 @@
     color: white;
     background-image: none;
   }
+
   25% {
     background-color: white;
     color: transparent;
@@ -257,6 +264,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   75% {
     background-color: white;
     color: transparent;
@@ -265,6 +273,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   100% {
     color: white;
   }
