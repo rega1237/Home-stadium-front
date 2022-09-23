@@ -10,9 +10,9 @@ const addGame = (game) => ({
 
 // Thunk
 
-const createGame = (token, id, game) => async (dispatch) => {
+const createGame = (token, id, gameData) => async (dispatch) => {
   try {
-    const response = await axios.post(`http://localhost:3000/stadiums/${id}/games`, { game: game }, {
+    const response = await axios.post(`http://localhost:3000/stadiums/${id}/games`, { game: gameData }, {
       headers: {
         Authorization: `${token}`,
       },
