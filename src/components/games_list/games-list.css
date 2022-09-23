@@ -81,3 +81,12 @@
 .games-list li button:hover {
   cursor: pointer;
 }
+
+.no-games {
+  color: #aaa;
+}
+
+.no-games h4 {
+  width: 100%;
+  text-align: center;
+}

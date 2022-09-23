@@ -30,6 +30,28 @@ button.error {
   animation: reqError 1s linear;
 }
 
+.add-button {
+  position: relative;
+  padding: 1em;
+  width: 11em;
+  margin-bottom: 2em;
+  margin-inline: auto;
+  background-color: #117ce0;
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #3b99f1;
+  cursor: pointer;
+}
+
+.add-button:active {
+  background-color: #0762b8;
+}
+
+
 @keyframes req200 {
   0% {
     color: white;

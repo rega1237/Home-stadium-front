@@ -32,6 +32,7 @@ const StadiumInfo = (props) => {
           </h5>
           <button
             type="button"
+            className="add-button"
             onClick={handleNewGame}
           >
             Add Game
