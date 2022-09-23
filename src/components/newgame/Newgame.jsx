@@ -26,12 +26,12 @@ const Newgame = () => {
 
   const handleCreateGame = async (e) => {
     e.preventDefault();
-    const game = {
+    const gameData = {
       date: e.target.date.value,
       team_one: e.target.teamA.value,
       team_two: e.target.teamB.value
     };
-    dispatch(createGame(user.token, id, game));
+    dispatch(createGame(user.token, id, gameData));
   };
 
   return (
