@@ -14,7 +14,7 @@ const Home = () => {
     }
   }, [user]);
 
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="home">
