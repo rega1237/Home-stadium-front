@@ -11,10 +11,6 @@
   overflow: hidden;
 }
 
-.image-input input[type=file] {
-  display: none;
-}
-
 .preview-container {
   width: 100%;
   display: flex;

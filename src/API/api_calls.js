@@ -27,11 +27,30 @@ const reserveGame = async (user, gameId, seats) => {
   }
 };
 
-const misc = () => {
-  console.log(2);
+const createStadium = async (user, stadium) => {
+  let response = '';
+  try {
+    response = await axios.post(`${BASE_URL}stadiums`, {
+      stadium,
+    },
+    {
+      headers: {
+        Authorization: user.token,
+      },
+    });
+    return {
+      state: true,
+      response,
+    };
+  } catch (error) {
+    return {
+      state: false,
+      response: error.response.data,
+    };
+  }
 };
 
 export {
   reserveGame,
-  misc,
+  createStadium,
 };

@@ -58,15 +58,6 @@ const Sliders = () => {
               </div>
               <div className="card-body">
                 <div className="card-body-section">
-                  <h5>
-                    <i className="fa fa-circle" aria-hidden="true" />
-                    Seats
-                  </h5>
-                  <h3>
-                    {item.seats}
-                  </h3>
-                </div>
-                <div className="card-body-section">
                   <h5>Stadium name</h5>
                   <h3>
                     {item.name}
@@ -75,6 +66,12 @@ const Sliders = () => {
                     <i className="fa fa-map-marker" aria-hidden="true" />
                     {item.country}
                   </h6>
+                </div>
+                <div className="card-body-section">
+                  <h5>
+                    <i className="fa fa-circle" aria-hidden="true" />
+                    {`Seats: ${item.seats}`}
+                  </h5>
                 </div>
               </div>
             </div>

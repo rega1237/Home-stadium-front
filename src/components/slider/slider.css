@@ -57,10 +57,9 @@
   flex-grow: 1;
 }
 
-.card-body-section:nth-child(1) {
+.card-body-section:nth-child(2) {
   width: 100%;
   text-align: right;
-  margin-bottom: -1em;
 }
 
 .card-body-section h3 {

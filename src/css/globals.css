@@ -22,6 +22,73 @@
   overflow: hidden;
 }
 
+button.done {
+  animation: req200 1s linear;
+}
+
+button.error {
+  animation: reqError 1s linear;
+}
+
+@keyframes req200 {
+  0% {
+    color: white;
+    background-image: none;
+    background-color: white;
+  }
+
+  25% {
+    color: transparent;
+    background-color: white;
+    background-image: url('../assets/static/check.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  75% {
+    color: transparent;
+    background-color: white;
+    background-image: url('../assets/static/check.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes reqError {
+  0% {
+    color: white;
+    background-image: none;
+  }
+
+  25% {
+    background-color: white;
+    color: transparent;
+    background-image: url('../assets/static/caution.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  75% {
+    background-color: white;
+    color: transparent;
+    background-image: url('../assets/static/caution.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
 @keyframes horizontalBounce {
   0% {
     margin-left: 0;
