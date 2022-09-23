@@ -36,27 +36,36 @@ const Sliders = () => {
         },
         '@0.75': {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
         '@1.00': {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 20,
         },
         '@1.50': {
           slidesPerView: 4,
-          spaceBetween: 50,
+          spaceBetween: 20,
         },
       }}
 
     >
       {items.map((item) => (
         <SwiperSlide key={item.id}>
-          <Link to={`/stadium/${item.id}`} className="stadium-link">
+          <Link to={`/stadium/${item.id}`}>
             <div className="card">
               <div className="thumb-feather">
                 <img src={item.photo} alt="stadium" className="slider-pic" />
               </div>
               <div className="card-body">
+                <div className="card-body-section">
+                  <h5>
+                    <i className="fa fa-circle" aria-hidden="true" />
+                    Seats
+                  </h5>
+                  <h3>
+                    {item.seats}
+                  </h3>
+                </div>
                 <div className="card-body-section">
                   <h5>Stadium name</h5>
                   <h3>
@@ -66,15 +75,6 @@ const Sliders = () => {
                     <i className="fa fa-map-marker" aria-hidden="true" />
                     {item.country}
                   </h6>
-                </div>
-                <div className="card-body-section">
-                  <h5>
-                    <i className="fa fa-circle" aria-hidden="true" />
-                    Seats
-                  </h5>
-                  <h3>
-                    {item.seats}
-                  </h3>
                 </div>
               </div>
             </div>
