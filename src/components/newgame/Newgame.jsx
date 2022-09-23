@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { useSelector } from "react-redux";
-import { createGame } from "../../redux/newGameReducer/newGameReducer";
-import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import { createGame } from '../../redux/newGameReducer/newGameReducer';
 
 const Newgame = () => {
   const dispatch = useDispatch();
@@ -12,7 +10,7 @@ const Newgame = () => {
   const { id } = useParams();
   const [teams, setTeams] = useState([]);
   const fetchTeams = async () => {
-    const response = await axios.get("http://localhost:3000/teams", {
+    const response = await axios.get('http://localhost:3000/teams', {
       headers: {
         Authorization: `Bearer ${user.token}`,
       },
@@ -29,7 +27,7 @@ const Newgame = () => {
     const gameData = {
       date: e.target.date.value,
       team_one: e.target.teamA.value,
-      team_two: e.target.teamB.value
+      team_two: e.target.teamB.value,
     };
     dispatch(createGame(user.token, id, gameData));
   };
