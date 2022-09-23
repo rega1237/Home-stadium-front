@@ -33,19 +33,6 @@ const initialState = {
 
 const gamesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_GAMES:
-      return {
-        ...state,
-      };
-    case GET_GAMES_SUCCESS:
-      return {
-        ...state,
-        games: action.payload,
-      };
-    case GET_GAMES_FAILURE:
-      return {
-        ...state,
-      };
     case ADD_GAME:
       return {
         ...state,
@@ -59,7 +46,6 @@ const gamesReducer = (state = initialState, action) => {
 export default gamesReducer;
 
 export {
-  fetchGames,
   createGame,
   addGame,
 };
