@@ -24,7 +24,7 @@
   margin-top: 2.5em;
 }
 
-.home-header button {
+.home-header .add-button {
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 8em;
@@ -35,12 +35,12 @@
   padding: 1em;
 }
 
-.home-header button:hover {
+.home-header .add-button:hover {
   background-color: #b8e035;
   cursor: pointer;
 }
 
-.home-header button:active {
+.home-header .add-button:active {
   background-color: #8db313;
 }
 

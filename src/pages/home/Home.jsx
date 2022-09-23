@@ -24,7 +24,11 @@ const Home = () => {
           <p>Here&apos;s a list of stadiums</p>
           <h4>Click one to see more details</h4>
         </div>
-        <button type="button" onClick={() => setIsModalOpen(false)}>
+        <button
+          type="button"
+          className="add-button"
+          onClick={() => setIsModalOpen(true)}
+        >
           Add Stadium
         </button>
       </div>

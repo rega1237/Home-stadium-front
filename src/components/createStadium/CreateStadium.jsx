@@ -107,7 +107,7 @@ const CreateStadium = (props) => {
         <button
           type="submit"
           disabled={submitDisabled}
-          className={`submit-stadium ${fetchDone ? 'done' : ''} ${fetchError ? 'error' : ''}`}
+          className={`add-button ${fetchDone ? 'done' : ''} ${fetchError ? 'error' : ''}`}
         >
           Add
         </button>

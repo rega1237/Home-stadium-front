@@ -33,9 +33,6 @@ button.error {
 .add-button {
   position: relative;
   padding: 1em;
-  width: 11em;
-  margin-bottom: 2em;
-  margin-inline: auto;
   background-color: #117ce0;
   border: none;
   border-radius: 0.3em;
