@@ -100,7 +100,7 @@ const ReserveGame = () => {
             <button
               type="submit"
               disabled={submitDisabled}
-              className={`${fetchDone ? 'done' : ''} ${fetchError ? 'error' : ''}`}
+              className={`add-button ${fetchDone ? 'done' : ''} ${fetchError ? 'error' : ''}`}
             >
               Reserve
             </button>

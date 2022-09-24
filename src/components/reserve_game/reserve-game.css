@@ -143,71 +143,23 @@
   appearance: textfield;
 }
 
-.reserve-form button {
+.reserve-form .add-button {
   background-color: #97bf0f;
-  border: none;
-  border-radius: 0.3em;
-  padding: 1em;
-  color: white;
 }
 
-.reserve-form button:hover {
-  cursor: pointer;
+.reserve-form .add-button:hover {
   background-color: #b5d843;
 }
 
-.reserve-form button:active {
+.reserve-form .add-button:active {
   background-color: #90b126;
 }
 
-.reserve-form button:disabled {
+.reserve-form .add-button:disabled {
   background-color: #eee;
   color: #ddd;
 }
 
 .reserve-game {
   position: relative;
-}
-
-.error-message {
-  width: 100%;
-  opacity: 1;
-  transform: translateY(-3.5em);
-  position: absolute;
-  top: 0;
-  text-align: center;
-  padding: 0.5em 1em;
-  background-color: #ffe389;
-  color: orangered;
-  transition: 0.4s ease-in;
-  font-size: 0.8em;
-}
-
-.error-message.show {
-  animation: errorMessage 1s linear;
-}
-
-.error-message:hover.show {
-  animation-play-state: paused;
-}
-
-@keyframes errorMessage {
-  0% {
-    transform: translateY(-3.5em);
-    opacity: 0;
-  }
-
-  10% {
-    transform: translateY(-1.1em);
-    opacity: 1;
-  }
-
-  80% {
-    transform: translateY(-1.1em);
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
 }

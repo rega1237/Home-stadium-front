@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { createGame } from '../../redux/newGameReducer/newGameReducer';
+import './new-game.css';
 
 const Newgame = () => {
   const dispatch = useDispatch();
@@ -34,19 +35,24 @@ const Newgame = () => {
 
   return (
     <>
-      <form onSubmit={handleCreateGame}>
-        <select name="teamA" id="">
+      <form onSubmit={handleCreateGame} className="create-game">
+        <div className="vs-badge">
+          <span>
+            VS
+          </span>
+        </div>
+        <select name="teamA" required>
           {teams?.map((team) => (
             <option key={team.id} value={team.id}>{team.name}</option>
           ))}
         </select>
-        <select name="teamB" id="">
+        <select name="teamB" required>
           {teams?.map((team) => (
             <option key={team.id} value={team.id}>{team.name}</option>
           ))}
         </select>
-        <input type="date" name="date" />
-        <button type="submit">
+        <input type="date" className="date-picker" name="date" required />
+        <button className="add-button" type="submit">
           Create Game
         </button>
       </form>
