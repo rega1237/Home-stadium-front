@@ -1,0 +1,44 @@
+.addgame-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+#selector {
+  border: none;
+  background-color: #97bf0f;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+}
+
+.date-input {
+  border: #000 1px solid;
+  font-size: 1.2em;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+}
+
+.date-input:active {
+  border: none;
+}
+
+.team-creation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
