@@ -22,8 +22,8 @@ const LoginForm = () => {
     if (user.token !== undefined) {
       window.location.href = "/";
     }
-    console.log(user);
   }, [dispatch, user]);
+
 
   const onSubmit = (data) => {
     dispatch(fetchLogIn(data.username));
