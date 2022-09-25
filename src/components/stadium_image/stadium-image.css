@@ -19,10 +19,10 @@
 
 .image-feather:hover::after {
   border-radius: 0.3em;
-  box-shadow: inset 0 0 0em 2em white;
+  box-shadow: inset 0 0 0 2em white;
 }
 
-.image-feather:after {
+.image-feather::after {
   position: absolute;
   top: -4px;
   content: '';
