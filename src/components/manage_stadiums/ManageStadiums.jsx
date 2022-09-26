@@ -20,7 +20,7 @@ const DeleteStadiums = () => {
       {items.map((item) => (
         <div key={item.id} className="grid-item">
           <div className="manage-card">
-            <img src={item.photo} alt="stadium" className="slider-pic" />
+            <img src={item.photo} alt="stadium" className="manage-pic" />
             <div className="manage-body">
               <h3>
                 Name:
