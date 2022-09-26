@@ -25,15 +25,12 @@ function App() {
         <Navbar />
         <div className="page-body">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/stadium/:id" element={<Stadium />} />
             <Route path="/stadiums" element={<DeleteStadiumsPage />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/my-reservations" element={<MyReservations />} />
-            {/* <Route path="/login" element={<Login />} />
-            {/* <Route path="/login" element={<Login />} />
-            <Route path="/delete" element={<DeleteStadiums />} /> */}
           </Routes>
         </div>
       </div>
