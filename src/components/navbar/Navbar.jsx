@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { logout } from '../../redux/usersReducer/usersReducer';
 import './navbar.css';
+import logo from '../../assets/static/t-logo.png';
 
 const Navbar = () => {
   const [isMenuActive, setMenuState] = useState(false);
@@ -26,7 +27,7 @@ const Navbar = () => {
       </button>
       <nav className={isMenuActive ? 'navbar' : 'navbar hidden'}>
         <Link to="/" className="logo">
-          <img src='../../../src/assets/static/t-logo.png' alt="logo" />
+          <img src={logo} alt="logo" />
         </Link>
         <ul className="links">
           <li>
