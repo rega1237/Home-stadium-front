@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { createGame } from '../../redux/newGameReducer/newGameReducer';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useSelector } from "react-redux";
+import { createGame } from "../../redux/newGameReducer/newGameReducer";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import './newgame.css';
+
 
 const Newgame = () => {
   const dispatch = useDispatch();
@@ -34,21 +37,35 @@ const Newgame = () => {
 
   return (
     <>
-      <form onSubmit={handleCreateGame}>
-        <select name="teamA" id="">
-          {teams?.map((team) => (
-            <option key={team.id} value={team.id}>{team.name}</option>
-          ))}
-        </select>
-        <select name="teamB" id="">
-          {teams?.map((team) => (
-            <option key={team.id} value={team.id}>{team.name}</option>
-          ))}
-        </select>
-        <input type="date" name="date" />
-        <button type="submit">
-          Create Game
-        </button>
+      <form onSubmit={handleCreateGame} className="addgame-form">
+        <div className="team-section">
+          <label htmlFor="teamA">Team A</label>
+          <select name="teamA" id="selector" defaultValue={"default"}>
+            <option value="default" disabled>
+              Select a team
+            </option>
+            {teams?.map((team) => (
+              <option key={team.id} value={team.id}>{team.name}</option>
+            ))}
+          </select>
+        </div>
+        <div className="team-section">
+          <label htmlFor="teamB">Team B</label>
+          <select name="teamB" id="selector" defaultValue={"default"}>
+            <option value="default" disabled>
+              Select a team
+            </option>
+            {teams?.map((team) => (
+              <option key={team.id} value={team.id}>{team.name}</option>
+            ))}
+          </select>
+        </div>
+        <div className="team-creation">
+          <input type="date" name="date" className="date-input" />
+          <button type="submit" className="add-game" >
+            Create Game
+          </button>
+        </div>
       </form>
     </>
   );

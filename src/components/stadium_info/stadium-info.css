@@ -22,6 +22,24 @@
   gap: 1em;
 }
 
+.add-game {
+  border: none;
+  background-color: #97bf0f;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+}
+
+.add-game:hover {
+  background-color: #7a9e0d;
+  cursor: pointer;
+}
+
+.add-game:active {
+  background-color: #5e7c0b;
+}
+
 .stadium-header-details span {
   color: #505050;
 }
