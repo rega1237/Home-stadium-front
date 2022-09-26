@@ -25,7 +25,7 @@ const Navbar = () => {
       </button>
       <nav className={isMenuActive ? 'navbar' : 'navbar hidden'}>
         <Link to="/" className="logo">
-          <img src="https://i.imgur.com/7I9Was5.png" alt="logo" />
+          <img src='../../../src/assets/static/t-logo.png' alt="logo" />
         </Link>
         <ul className="links">
           <li className="active">
