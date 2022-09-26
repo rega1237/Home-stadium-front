@@ -58,6 +58,15 @@ const Sliders = () => {
               </div>
               <div className="card-body">
                 <div className="card-body-section">
+                  <h5>
+                    <i className="fa fa-circle" aria-hidden="true" />
+                    Seats
+                  </h5>
+                  <h3>
+                    {item.seats}
+                  </h3>
+                </div>
+                <div className="card-body-section">
                   <h5>Stadium name</h5>
                   <h3>
                     {item.name}
@@ -67,12 +76,15 @@ const Sliders = () => {
                     {item.country}
                   </h6>
                 </div>
+<<<<<<< HEAD
                 <div className="card-body-section">
                   <h5>
                     <i className="fa fa-circle" aria-hidden="true" />
                     {`Seats: ${item.seats}`}
                   </h5>
                 </div>
+=======
+>>>>>>> 8b4bea88a082c03a6093eba44d1640283505bea7
               </div>
             </div>
           </Link>

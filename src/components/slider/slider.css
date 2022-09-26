@@ -57,9 +57,14 @@
   flex-grow: 1;
 }
 
+<<<<<<< HEAD
 .card-body-section:nth-child(2) {
+=======
+.card-body-section:nth-child(1) {
+>>>>>>> 8b4bea88a082c03a6093eba44d1640283505bea7
   width: 100%;
   text-align: right;
+  margin-bottom: -1em;
 }
 
 .card-body-section h3 {
