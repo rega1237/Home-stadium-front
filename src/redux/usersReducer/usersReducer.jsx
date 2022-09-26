@@ -1,50 +1,49 @@
 import axios from 'axios';
 
-//actions
+// actions
 const SIGN_IN_SUCCESS = 'USER/SIGN_IN_SUCCESS';
 const SIGN_IN_FAILURE = 'USER/SIGN_IN_FAILURE';
 const GET_USER = 'USER/GET_USER';
 const LOG_OUT = 'USER/LOG_OUT';
 
-//action creators
+// action creators
 
 const signInSuccess = (user) => ({
   type: SIGN_IN_SUCCESS,
-  payload: user
+  payload: user,
 });
 
 const signInFailure = (error) => ({
   type: SIGN_IN_FAILURE,
-  payload: error
+  payload: error,
 });
 
 const getUser = () => ({
-  type: GET_USER
+  type: GET_USER,
 });
 
 const logout = () => ({
-  type: LOG_OUT
+  type: LOG_OUT,
 });
 
 const fetchLogIn = (user) => async (dispatch) => {
   try {
     const response = await axios.post('http://localhost:3000/auth/login', { username: user });
-    console.log(response.data);
     dispatch(signInSuccess(response.data));
   } catch (error) {
     dispatch(signInFailure(error));
   }
 };
 
-//initial state
+// initial state
 const initialState = {
   user: {
     login: false,
   },
-  
+
 };
 
-//reducer
+// reducer
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case SIGN_IN_SUCCESS:
@@ -56,7 +55,7 @@ const usersReducer = (state = initialState, action) => {
     case SIGN_IN_FAILURE:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     case GET_USER:
       return {
@@ -71,13 +70,10 @@ const usersReducer = (state = initialState, action) => {
   }
 };
 
-
-
-
 export default usersReducer;
 
-export { 
+export {
   fetchLogIn,
   getUser,
-  logout
+  logout,
 };

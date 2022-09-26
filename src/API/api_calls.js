@@ -50,7 +50,29 @@ const createStadium = async (user, stadium) => {
   }
 };
 
+const cancelReservation = (user, reservationID) => {
+  let response = {};
+  try {
+    response = axios.delete(`${BASE_URL}users/${user.id}/reservations/${reservationID}`, {
+      headers: {
+        Authorization: user.token,
+      },
+    });
+
+    return {
+      state: true,
+      response,
+    };
+  } catch (error) {
+    return {
+      state: false,
+      response: error.response.data,
+    };
+  }
+};
+
 export {
   reserveGame,
   createStadium,
+  cancelReservation,
 };

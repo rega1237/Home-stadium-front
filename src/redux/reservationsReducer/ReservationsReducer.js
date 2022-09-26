@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../API/api_config';
 
 // ACTIONS
 export const GET_RESERVATIONS = 'FRONT-END/RESERVATIONS-REDUCER/GET_RESERVATIONS';
@@ -6,7 +7,6 @@ export const GET_RESERVATIONS_SUCCESS = 'FRONT-END/RESERVATIONS-REDUCER/GET_RESE
 export const GET_RESERVATIONS_FAILURE = 'FRONT-END/RESERVATIONS-REDUCER/GET_RESERVATIONS_FAILURE';
 
 // Action Creators
-
 const getReservations = () => ({
   type: GET_RESERVATIONS,
 });
@@ -21,11 +21,15 @@ const getReservationsFailure = () => ({
 });
 
 // Thunk
-const fetchReservations = () => async (dispatch) => {
+const fetchReservations = (user) => async (dispatch) => {
   dispatch(getReservations());
   let reservations = [];
   try {
-    const response = await axios.get('http://localhost:3000/reservations');
+    const response = await axios.get(`${BASE_URL}users/${user.id}/reservations`, {
+      headers: {
+        Authorization: user.token,
+      },
+    });
     reservations = response.data;
     dispatch(getReservationsSuccess(reservations));
   } catch (error) {
@@ -47,7 +51,6 @@ const reservationsReducer = (state = initialState, action) => {
       };
     case GET_RESERVATIONS_SUCCESS:
       return {
-        ...state,
         reservations: action.payload,
       };
     case GET_RESERVATIONS_FAILURE:

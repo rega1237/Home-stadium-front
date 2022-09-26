@@ -1,8 +1,6 @@
 .form-section {
-  position: absolute;
-  top: 35%;
-  left: 45%;
   margin: auto;
+  margin-top: 10em;
   width: 100%;
   max-width: 400px;
   padding: 20px;
