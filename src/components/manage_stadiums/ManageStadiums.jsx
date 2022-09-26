@@ -6,22 +6,22 @@ import './manageStadiums.css';
 const DeleteStadiums = () => {
   const dispatch = useDispatch();
   const { items } = useSelector((state) => state.home);
-
+  const { user } = useSelector((state) => state.users);
   useEffect(() => {
     dispatch(fetchItems());
   }, [dispatch]);
 
   const handleDelete = (id) => {
-    dispatch(deleteItem(id));
+    dispatch(deleteItem(id, user.token));
   };
 
   return (
     <div className="grid-container">
       {items.map((item) => (
         <div key={item.id} className="grid-item">
-          <div className="card">
+          <div className="manage-card">
             <img src={item.photo} alt="stadium" className="slider-pic" />
-            <div className="card-body">
+            <div className="manage-body">
               <h3>
                 Name:
                 {' '}
@@ -32,7 +32,7 @@ const DeleteStadiums = () => {
                 {' '}
                 {item.seats}
               </p>
-              <button type="button" onClick={() => handleDelete(item.id)}>Delete</button>
+              <button type="button" onClick={() => handleDelete(item.id)} className="button-delete">Delete</button>
             </div>
           </div>
         </div>

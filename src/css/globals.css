@@ -22,6 +22,30 @@
   overflow: hidden;
 }
 
+.button-delete {
+  display: block;
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin: 10px auto;
+  background-color: #bf500f;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.5em;
+  cursor: pointer;
+}
+
+.button-delete:hover {
+  background-color: #bf0f0f;
+}
+
+.button-delete:active {
+  background-color: #bf0f0f;
+}
+
 @keyframes horizontalBounce {
   0% {
     margin-left: 0;
