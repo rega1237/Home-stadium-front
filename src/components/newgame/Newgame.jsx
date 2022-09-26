@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { createGame } from '../../redux/newGameReducer/newGameReducer';
-import './new-game.css';
+import './newgame.css';
 
 const Newgame = () => {
   const dispatch = useDispatch();
@@ -35,26 +35,35 @@ const Newgame = () => {
 
   return (
     <>
-      <form onSubmit={handleCreateGame} className="create-game">
-        <div className="vs-badge">
-          <span>
-            VS
-          </span>
+      <form onSubmit={handleCreateGame} className="addgame-form">
+        <div className="team-section">
+          <span>Team A</span>
+          <select name="teamA" id="selector" defaultValue="default">
+            <option value="default" disabled>
+              Select a team
+            </option>
+            {teams?.map((team) => (
+              <option key={team.id} value={team.id}>{team.name}</option>
+            ))}
+          </select>
         </div>
-        <select name="teamA" required>
-          {teams?.map((team) => (
-            <option key={team.id} value={team.id}>{team.name}</option>
-          ))}
-        </select>
-        <select name="teamB" required>
-          {teams?.map((team) => (
-            <option key={team.id} value={team.id}>{team.name}</option>
-          ))}
-        </select>
-        <input type="date" className="date-picker" name="date" required />
-        <button className="add-button" type="submit">
-          Create Game
-        </button>
+        <div className="team-section">
+          <span>Team B</span>
+          <select name="teamB" id="selector" defaultValue="default">
+            <option value="default" disabled>
+              Select a team
+            </option>
+            {teams?.map((team) => (
+              <option key={team.id} value={team.id}>{team.name}</option>
+            ))}
+          </select>
+        </div>
+        <div className="team-creation">
+          <input type="date" name="date" className="date-input" />
+          <button type="submit" className="add-game">
+            Create Game
+          </button>
+        </div>
       </form>
     </>
   );

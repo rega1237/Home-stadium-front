@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "../../redux/usersReducer/usersReducer";
 import { useForm } from "react-hook-form";
@@ -22,13 +22,12 @@ const FormHook = () => {
 
   useEffect(() => {
     dispatch(getUser());
-    if (user.token !== null) {
+    if (user.token !== undefined) {
       window.location.href = "/";
     }
   }, [dispatch, user]);
 
   const onSubmit = async (data) => {
-    console.log(data);
     try {
       const response = await axios.post('http://localhost:3000/users', {user: data});
       if (response.status === 201) {
@@ -43,13 +42,14 @@ const FormHook = () => {
     }
   };
   return (
-    <Fragment>
+    <div className="form-section">
       <h1>Sign up</h1>
       <form 
         onSubmit={handleSubmit(onSubmit)}
         className="form"
       >
-        <input 
+        <input
+          className="input" 
           placeholder="Username"
           {...register("username", {
             required: "Username is required",
@@ -60,9 +60,9 @@ const FormHook = () => {
           })}
         />
         {errors.username && <p>{errors.username.message}</p>}
-        <input type="submit" value="Send" />
+        <input type="submit" value="Send" className="add-game" />
       </form>
-    </Fragment>
+    </div>
   );
 };
 
