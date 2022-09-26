@@ -60,6 +60,9 @@ const FormHook = () => {
           })}
         />
         {errors.username && <p>{errors.username.message}</p>}
+        <a href="/login">
+          <p style={{color: "blue", padding: "1em",}}>Log in</p>
+        </a>
         <input type="submit" value="Send" className="add-game" />
       </form>
     </div>

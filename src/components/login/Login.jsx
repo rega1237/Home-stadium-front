@@ -47,7 +47,7 @@ const LoginForm = () => {
         />
         {errors.username && <p>{errors.username.message}</p>}
         <a rel="stylesheet" href="/signup">
-          <p>Sign up</p>
+          <p style={{color: "blue", padding: "1em",}}>Sign up</p>
         </a>
         <input type="submit" value="Send" className="add-game" />
       </form>
