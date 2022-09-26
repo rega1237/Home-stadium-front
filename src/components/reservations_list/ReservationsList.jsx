@@ -1,9 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useSelector, useDispatch } from 'react-redux';
+import { cancelReservation } from '../../API/api_calls';
+import { fetchReservations, resetReservations } from '../../redux/reservationsReducer/ReservationsReducer';
 import './reservations-list.css';
 
 const ReservationsList = (props) => {
+  const { user } = useSelector((state) => state.users);
+  const dispatch = useDispatch();
   const { reservations } = props;
+
+  const handleCancel = async (event, id) => {
+    const requestState = await cancelReservation(user, id);
+    if (requestState.state) {
+      dispatch(resetReservations);
+      dispatch(fetchReservations(user));
+      console.log('canceled');
+    }
+    if (requestState.state === false) {
+      console.log(requestState);
+    }
+  };
 
   return (
     <ul className="table">
@@ -18,15 +35,33 @@ const ReservationsList = (props) => {
       {
         reservations.map((reservation) => (
           <li key={reservation.id} className="table-row">
-            <p>{reservation.stadium.name}</p>
-            <p>{reservation.game.team_a}</p>
+            <p>{reservation.reserved_game.stadium}</p>
+            <p>
+              <img
+                src={reservation.reserved_game.teams[0].flag}
+                alt={reservation.reserved_game.teams[0].name}
+              />
+              {reservation.reserved_game.teams[0].name}
+            </p>
             <p className="vs">vs</p>
-            <p>{reservation.game.team_b}</p>
+            <p>
+              <img
+                src={reservation.reserved_game.teams[0].flag}
+                alt={reservation.reserved_game.teams[0].name}
+              />
+              {reservation.reserved_game.teams[0].name}
+            </p>
             <div className="tb-row-medium">
-              <input type="date" value={reservation.game.date} className="date-picker" />
+              <input type="date" value={reservation.reserved_game.date.substring(0, 10)} className="date-picker" />
             </div>
             <div className="tb-row-medium">
-              <button type="button" className="cancel-button">Cancel</button>
+              <button
+                type="button"
+                className="cancel-button"
+                onClick={(event) => handleCancel(event, reservation.id)}
+              >
+                Cancel
+              </button>
             </div>
           </li>
         ))

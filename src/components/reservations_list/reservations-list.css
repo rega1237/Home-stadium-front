@@ -21,6 +21,12 @@
   font-weight: 300;
 }
 
+.table-row p img {
+  width: 2em;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
 .tb-row-medium {
   width: 4.6em;
 }

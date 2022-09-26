@@ -6,19 +6,20 @@ import './my-reservations.css';
 
 const MyReservations = () => {
   const { reservations } = useSelector((state) => state.reservations);
+  const { user } = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchReservations());
+    dispatch(fetchReservations(user));
   }, [dispatch]);
 
   return (
     <section className="page-wrapper">
       <h1>
-        {`${reservations.user?.name}'s reservations`}
+        {`${user?.username}'s reservations`}
       </h1>
 
-      <ReservationsList reservations={reservations?.reservations} />
+      <ReservationsList reservations={reservations} />
     </section>
   );
 };
