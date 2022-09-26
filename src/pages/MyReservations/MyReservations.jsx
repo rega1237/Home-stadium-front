@@ -10,6 +10,12 @@ const MyReservations = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (user.token === undefined) {
+      window.location.href = '/login';
+    }
+  }, [user]);
+
+  useEffect(() => {
     dispatch(fetchReservations(user));
   }, [dispatch, reservations]);
 

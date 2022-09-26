@@ -12,6 +12,13 @@ const Stadium = () => {
   const { stadium } = useSelector((state) => state.stadium);
   const { user } = useSelector((state) => state.users);
   const { id } = useParams();
+
+  useEffect(() => {
+    if (user.token === undefined) {
+      window.location.href = '/login';
+    }
+  }, [user]);
+
   useEffect(() => {
     redirectIfNotLogged(user);
     dispatch(fetchStadium(user.token, id));
