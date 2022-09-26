@@ -43,9 +43,13 @@ const fetchItems = (token) => async (dispatch) => {
   }
 };
 
-const deleteItem = (id) => async (dispatch) => {
+const deleteItem = (id, token) => async (dispatch) => {
   try {
-    await axios.delete(`http://localhost:3000/stadiums/${id}`);
+    await axios.delete(`http://localhost:3000/stadiums/${id}`, {
+      headers: {
+        Authorization: `${token}`,
+      },
+    });
     dispatch(deleteItemSuccess(id));
   } catch (error) {
     console.log(error);
