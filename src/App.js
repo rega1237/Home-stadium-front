@@ -4,6 +4,8 @@ import {
   Routes,
 } from 'react-router-dom';
 
+import { useSelector } from 'react-redux';
+
 import './css/reset.css';
 import './css/page-layout.css';
 import './css/globals.css';
@@ -19,10 +21,17 @@ import MyReservations from './pages/MyReservations/MyReservations';
 import Navbar from './components/navbar/Navbar';
 
 function App() {
+  const { user } = useSelector((state) => state.users);
+
   return (
     <Router>
       <div className="total-app">
-        <Navbar />
+        {
+        user?.token !== undefined
+          ? (
+            <Navbar />
+          ) : ''
+        }
         <div className="page-body">
           <Routes>
             <Route path="/home" element={<Home />} />
