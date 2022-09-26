@@ -11,7 +11,7 @@ const MyReservations = () => {
 
   useEffect(() => {
     dispatch(fetchReservations(user));
-  }, [dispatch]);
+  }, [dispatch, reservations]);
 
   return (
     <section className="page-wrapper">

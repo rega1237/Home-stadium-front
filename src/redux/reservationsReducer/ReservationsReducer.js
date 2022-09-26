@@ -5,14 +5,8 @@ import { BASE_URL } from '../../API/api_config';
 export const GET_RESERVATIONS = 'FRONT-END/RESERVATIONS-REDUCER/GET_RESERVATIONS';
 export const GET_RESERVATIONS_SUCCESS = 'FRONT-END/RESERVATIONS-REDUCER/GET_RESERVATIONS_SUCCESS';
 export const GET_RESERVATIONS_FAILURE = 'FRONT-END/RESERVATIONS-REDUCER/GET_RESERVATIONS_FAILURE';
-export const RESET_RESERVATIONS = 'FRONT-END/RESERVATIONS-REDUCER/RESET_RESERVATIONS';
 
 // Action Creators
-
-const resetReservations = () => ({
-  type: RESET_RESERVATIONS,
-});
-
 const getReservations = () => ({
   type: GET_RESERVATIONS,
 });
@@ -59,10 +53,6 @@ const reservationsReducer = (state = initialState, action) => {
       return {
         reservations: action.payload,
       };
-    case RESET_RESERVATIONS:
-      return {
-        reservations: initialState,
-      };
     case GET_RESERVATIONS_FAILURE:
       return {
         ...state,
@@ -76,7 +66,6 @@ export default reservationsReducer;
 
 export {
   fetchReservations,
-  resetReservations,
   getReservations,
   getReservationsSuccess,
   getReservationsFailure,

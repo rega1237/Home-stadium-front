@@ -46,7 +46,7 @@
   font-weight: 600;
 }
 
-li:nth-child(even) {
+.table li:nth-child(even) {
   background-color: #f2f2f2;
 }
 
@@ -69,19 +69,19 @@ li:nth-child(even) {
   cursor: pointer;
 }
 
-li:nth-child(even) .date-picker {
+.table li:nth-child(even) .date-picker {
   background-color: #bababa;
 }
 
-li:nth-child(odd) .date-picker {
+.table li:nth-child(odd) .date-picker {
   background-color: #ccc;
 }
 
-li:nth-child(even) .date-picker:focus {
+.table li:nth-child(even) .date-picker:focus {
   outline: 1px solid #888;
 }
 
-li:nth-child(odd) .date-picker:focus {
+.table li:nth-child(odd) .date-picker:focus {
   outline: 1px solid #aaa;
 }
 
@@ -101,4 +101,14 @@ li:nth-child(odd) .date-picker:focus {
 
 .cancel-button:active {
   background-color: rgb(211, 47, 47);
+}
+
+.no-reservations {
+  display: block;
+  background-color: #ddd;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.8em;
+  margin-top: 1em;
+  color: #999;
 }
