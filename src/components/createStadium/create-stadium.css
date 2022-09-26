@@ -11,10 +11,6 @@
   overflow: hidden;
 }
 
-.image-input input[type=file] {
-  display: none;
-}
-
 .preview-container {
   width: 100%;
   display: flex;
@@ -72,23 +68,8 @@
   flex-wrap: wrap;
 }
 
-.submit-stadium {
-  position: relative;
-  padding: 1em;
-  width: 11em;
-  margin-bottom: 2em;
+.create-stadium form .add-button {
   margin-inline: auto;
-  background-color: #117ce0;
-  border: none;
-  border-radius: 0.3em;
-  color: white;
-}
-
-.submit-stadium:hover {
-  background-color: #3b99f1;
-  cursor: pointer;
-}
-
-.submit-stadium:active {
-  background-color: #0762b8;
+  margin-bottom: 2em;
+  width: 10em;
 }

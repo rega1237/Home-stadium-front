@@ -9,7 +9,7 @@ import './stadium-info.css';
 const StadiumInfo = (props) => {
   const { stadium } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [newGame , setNewGame] = useState(false);
+  const [newGame, setNewGame] = useState(false);
 
   const handleNewGame = () => {
     setNewGame(true);
@@ -32,9 +32,11 @@ const StadiumInfo = (props) => {
           </h5>
           <button
             type="button"
+            className="add-button"
             onClick={handleNewGame}
-            className="button add-game"
-          >Add Game</button>
+          >
+            Add Game
+          </button>
         </div>
 
         <GamesList

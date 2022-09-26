@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
-import { logout } from '../../redux/usersReducer/usersReducer';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import { logout } from '../../redux/usersReducer/usersReducer';
 import './navbar.css';
+import logo from '../../assets/static/t-logo.png';
 
 const Navbar = () => {
   const [isMenuActive, setMenuState] = useState(false);
@@ -25,20 +27,20 @@ const Navbar = () => {
       </button>
       <nav className={isMenuActive ? 'navbar' : 'navbar hidden'}>
         <Link to="/" className="logo">
-          <img src="https://i.imgur.com/7I9Was5.png" alt="logo" />
+          <img src={logo} alt="logo" />
         </Link>
         <ul className="links">
-          <li className="active">
-            <Link to="/">Home</Link>
+          <li>
+            <NavLink to="/home">Home</NavLink>
           </li>
           <li>
-            <Link to="/my-reservations">My Reservations</Link>
+            <NavLink to="/my-reservations">My Reservations</NavLink>
           </li>
           <li>
-            <Link to="/stadiums">Manage Stadiums</Link>
+            <NavLink to="/stadiums">Manage Stadiums</NavLink>
           </li>
           <li>
-            <a href="" onClick={ () => handleLogout() }>Log Out</a>
+            <Link href="" onClick={() => handleLogout()}>Log Out</Link>
           </li>
         </ul>
         <div className="social-media">

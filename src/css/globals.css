@@ -1,0 +1,182 @@
+.loading {
+  width: 50%;
+  padding: 2em;
+  margin: 0 auto;
+}
+
+.loading h4 {
+  text-align: center;
+  font-size: 2em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+
+.loading .spinner {
+  display: block;
+  width: 2em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: #97bf0f;
+  animation: horizontalBounce 1.5s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+  overflow: hidden;
+}
+
+button.done {
+  animation: req200 1s linear;
+}
+
+button.error {
+  animation: reqError 1s linear;
+}
+
+.add-button {
+  position: relative;
+  padding: 1em;
+  background-color: #117ce0;
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #3b99f1;
+  cursor: pointer;
+}
+
+.add-button:active {
+  background-color: #0762b8;
+}
+
+.button-delete {
+  padding: 1em;
+  background-color: #e01111;
+  border: none;
+  border-radius: 0.3em;
+  color: white;
+  cursor: pointer;
+}
+
+.button-delete:hover {
+  background-color: #ee8080;
+}
+
+.button-delete:active {
+  background-color: #b80707;
+}
+
+.error-message {
+  width: 100%;
+  opacity: 1;
+  transform: translateY(-3.5em);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 0.5em 1em;
+  background-color: #ffe389;
+  color: orangered;
+  transition: 0.4s ease-in;
+  font-size: 0.8em;
+}
+
+.error-message.show {
+  animation: errorMessage 1s linear;
+}
+
+.error-message:hover.show {
+  animation-play-state: paused;
+}
+
+@keyframes errorMessage {
+  0% {
+    transform: translateY(-3.5em);
+    opacity: 0;
+  }
+
+  10% {
+    transform: translateY(-1.1em);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(-1.1em);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes req200 {
+  0% {
+    color: white;
+    background-image: none;
+    background-color: white;
+  }
+
+  25% {
+    color: transparent;
+    background-color: white;
+    background-image: url('../assets/static/check.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  75% {
+    color: transparent;
+    background-color: white;
+    background-image: url('../assets/static/check.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes reqError {
+  0% {
+    color: white;
+    background-image: none;
+  }
+
+  25% {
+    background-color: white;
+    color: transparent;
+    background-image: url('../assets/static/caution.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  75% {
+    background-color: white;
+    color: transparent;
+    background-image: url('../assets/static/caution.svg');
+    background-size: 2.5em;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  100% {
+    color: white;
+  }
+}
+
+@keyframes horizontalBounce {
+  0% {
+    margin-left: 0;
+  }
+
+  50% {
+    margin-left: calc(100% - 2em);
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}
