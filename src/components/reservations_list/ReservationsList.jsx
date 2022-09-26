@@ -51,10 +51,10 @@ const ReservationsList = (props) => {
                   <p className="vs">vs</p>
                   <p>
                     <img
-                      src={reservation.reserved_game.teams[0].flag}
-                      alt={reservation.reserved_game.teams[0].name}
+                      src={reservation.reserved_game.teams[1].flag}
+                      alt={reservation.reserved_game.teams[1].name}
                     />
-                    {reservation.reserved_game.teams[0].name}
+                    {reservation.reserved_game.teams[1].name}
                   </p>
                   <div className="tb-row-medium">
                     <input type="date" value={reservation.reserved_game.date.substring(0, 10)} className="date-picker" />
