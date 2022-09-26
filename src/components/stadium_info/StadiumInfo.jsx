@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import GamesList from '../games_list/GamesList';
 import Modal from '../modal/Modal';
 import ReserveGame from '../reserve_game/ReserveGame';
+import Newgame from '../newgame/Newgame';
 import './stadium-info.css';
 
 const StadiumInfo = (props) => {
   const { stadium } = props;
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [newGame , setNewGame] = useState(false);
+
+  const handleNewGame = () => {
+    setNewGame(true);
+  };
 
   return (
     <>
@@ -24,6 +30,11 @@ const StadiumInfo = (props) => {
               {`Seats: ${stadium.seats}`}
             </span>
           </h5>
+          <button
+            type="button"
+            onClick={handleNewGame}
+            className="button add-game"
+          >Add Game</button>
         </div>
 
         <GamesList
@@ -39,6 +50,13 @@ const StadiumInfo = (props) => {
         <div>
           <ReserveGame />
         </div>
+      </Modal>
+      <Modal
+        title="Add-game"
+        open={newGame}
+        setIsModalOpen={setNewGame}
+      >
+        <Newgame />
       </Modal>
     </>
   );
