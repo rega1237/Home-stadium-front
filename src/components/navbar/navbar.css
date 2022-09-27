@@ -47,7 +47,6 @@
   background-color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   gap: 2em;
   padding-top: 2em;
@@ -69,7 +68,6 @@
 .links {
   width: calc(100% - 1em);
   max-width: 25em;
-  margin-top: -20em;
 }
 
 .links li {
@@ -100,6 +98,7 @@
 .social-media {
   width: 100%;
   max-width: 20em;
+  margin-top: auto;
 }
 
 .social-media ul {
