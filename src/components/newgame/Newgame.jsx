@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { createGame } from '../../redux/newGameReducer/newGameReducer';
+import { BASE_URL } from '../../API/api_config';
 import './newgame.css';
 
 const Newgame = () => {
@@ -11,7 +12,7 @@ const Newgame = () => {
   const { id } = useParams();
   const [teams, setTeams] = useState([]);
   const fetchTeams = async () => {
-    const response = await axios.get('http://localhost:3000/teams', {
+    const response = await axios.get(`${BASE_URL}teams`, {
       headers: {
         Authorization: `Bearer ${user.token}`,
       },

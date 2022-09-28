@@ -2,6 +2,7 @@ import axios from 'axios';
 import { BASE_URL } from './api_config';
 
 const reserveGame = async (user, gameId, seats) => {
+  console.log(gameId);
   let response = '';
   try {
     response = await axios.post(`${BASE_URL}users/${user.user_id}/reservations`, {
