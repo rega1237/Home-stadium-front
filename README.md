@@ -22,7 +22,7 @@
 - JavaScript
 - React & Redux
 
-## Live Demo (if available)
+## Live Demo (https://homestadium.netlify.app/home)
 
 [Live Demo](https://homestadium.netlify.app/home)
 
