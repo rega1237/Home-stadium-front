@@ -31,6 +31,7 @@ const FormHook = () => {
       const response = await axios.post(`${BASE_URL}users`, { user: data });
       if (response.status === 201) {
         alert('User created successfully');
+        window.location.href = '/login';
       }
     } catch (error) {
       if (error.response.status === 422) {
