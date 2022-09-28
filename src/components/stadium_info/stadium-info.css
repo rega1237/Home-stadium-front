@@ -1,0 +1,65 @@
+.stadium-info {
+  flex-shrink: 1;
+  flex-grow: 1;
+  flex-basis: 20em;
+  display: flex;
+  gap: 1.5em;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.stadium-info .add-button {
+  margin-top: 1em;
+}
+
+.stadium-info-header h2 {
+  margin-bottom: 0.3em;
+  text-align: right;
+  font-size: 2em;
+  font-weight: bold;
+  color: #494949;
+}
+
+.stadium-header-details {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+}
+
+.add-game {
+  border: none;
+  background-color: #97bf0f;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 0.3em;
+  padding: 0.5em 1em;
+}
+
+.add-game:hover {
+  background-color: #7a9e0d;
+  cursor: pointer;
+}
+
+.add-game:active {
+  background-color: #5e7c0b;
+}
+
+.stadium-header-details span {
+  color: #505050;
+}
+
+.stadium-country {
+  color: #97bf0f;
+}
+
+.stadium-seats {
+  color: #bf0f0f;
+}
+
+@media (min-width: 1040px) {
+  .stadium-info {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+}

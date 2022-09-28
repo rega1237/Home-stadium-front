@@ -1,70 +1,74 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Final capstone project - Home Stadium
+
+> We developed the front-end section of the final capstone project where we create interfaces in which you can reserve football games in your favorites stadiums.
+
+> ### Home Stadium home-page.
+> It shows a slider with the currently available stadiums and a button where you can add a new one.
+> ### Stadium page.
+> Here you can reserve the game that you would like to assist and also you can add new games to the current stadium.
+> ### My Reservations
+> In this section you can se your current selected games reservations.
+> ### Manage Stadiums
+> Here you can delete any stadium on the list.
+
+
+
+<div align="center"><img src="./src/assets/static/mock.png" alt=""></div>
+
+## Built With
+
+- JavaScript
+- React & Redux
+
+## Live Demo (if available)
+
+[Live Demo]()
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can clone the repository with the following link:
+`https://github.com/rega1237/front-end-capstone-fullstack.git`
 
-### `npm start`
+ Once you have clone the repository run:
+ `npm install`
+ to install all the dependencies that you need.
+ Then you can run a live version with the command `npm start`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Author
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+👤 **Amaury Perez**
 
-### `npm test`
+- GitHub: [@Trictonicmp](https://github.com/Trictonicmp)
+- LinkedIn: [Amaury Permer](https://linkedin.com/in/amaury-permer)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+👤 **Arturo Hermida**
 
-### `npm run build`
+- GitHub: [@Artbsc1992](https://github.com/Artbsc1992)
+- Twitter: [@Arturo_D_Rock](https://twitter.com/Arturo_D_Rock)
+- LinkedIn: [Arturo Hermida](https://www.linkedin.com/in/arturo-hermida29/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🤝 Contributing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Contributions, issues, and feature requests are welcome!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to check the [issues page](../../issues/).
 
-### `npm run eject`
+## Show your support
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Give a ⭐️ if you like this project!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📝 License
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENCE) licensed.

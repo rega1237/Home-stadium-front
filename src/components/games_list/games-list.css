@@ -1,0 +1,92 @@
+.games-list li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.games-list li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.games-list li h6 {
+  word-wrap: break-word;
+  color: #494949;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.games-list h6 img {
+  max-width: 2em;
+  max-height: 2em;
+  vertical-align: middle;
+  margin-right: 1em;
+}
+
+.games-list li .vs-column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 10em;
+  display: flex;
+  justify-content: center;
+}
+
+.games-list li .vs-column span {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0.3em;
+  border-radius: 1em;
+  background-color: white;
+  color: #494949;
+}
+
+.date-picker {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-left: auto;
+  max-width: 10em;
+  padding: 0.5em;
+  font-size: 0.7em;
+  border: none;
+  border-radius: 1em;
+}
+
+.games-list li:nth-child(odd) .date-picker {
+  background-color: #bababa;
+}
+
+.games-list li:nth-child(even) .date-picker {
+  background-color: #ddd;
+}
+
+.games-list li:nth-child(odd) .date-picker:focus {
+  outline: 1px solid #888;
+}
+
+.games-list li:nth-child(even) .date-picker:focus {
+  outline: 1px solid #aaa;
+}
+
+.games-list li button {
+  border: none;
+  font-size: 0.7em;
+  padding: 0.7em;
+  border-radius: 0.3em;
+}
+
+.games-list li button:hover {
+  cursor: pointer;
+}
+
+.no-games {
+  color: #aaa;
+}
+
+.no-games h4 {
+  width: 100%;
+  text-align: center;
+}
