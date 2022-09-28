@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../API/api_config';
 
 // ACTIONS
 export const GET_ITEMS = 'FRONT-END/HOME-REDUCER/GET_ITEMS';
@@ -31,7 +32,7 @@ const fetchItems = (token) => async (dispatch) => {
   dispatch(getItems());
   let items = [];
   try {
-    const response = await axios.get('http://localhost:3000/stadiums', {
+    const response = await axios.get(`${BASE_URL}stadiums`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -45,7 +46,7 @@ const fetchItems = (token) => async (dispatch) => {
 
 const deleteItem = (id, token) => async (dispatch) => {
   try {
-    await axios.delete(`http://localhost:3000/stadiums/${id}`, {
+    await axios.delete(`${BASE_URL}stadiums/${id}`, {
       headers: {
         Authorization: `${token}`,
       },

@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:3000/';
+const BASE_URL = 'https://stadiums-rails-api.herokuapp.com/';
 const STADIUM = 'stadium/';
 
 export {
