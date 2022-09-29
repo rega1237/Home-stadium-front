@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { getUser } from '../../redux/usersReducer/usersReducer';
+import { BASE_URL } from '../../API/api_config';
 
 import './signUpForm.css';
 
@@ -27,9 +28,10 @@ const FormHook = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('http://localhost:3000/users', { user: data });
+      const response = await axios.post(`${BASE_URL}users`, { user: data });
       if (response.status === 201) {
         alert('User created successfully');
+        window.location.href = '/login';
       }
     } catch (error) {
       if (error.response.status === 422) {

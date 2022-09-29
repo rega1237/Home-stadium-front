@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_URL } from '../../API/api_config';
 
 // actions
 const SIGN_IN_SUCCESS = 'USER/SIGN_IN_SUCCESS';
@@ -28,7 +29,7 @@ const logout = () => ({
 
 const fetchLogIn = (user) => async (dispatch) => {
   try {
-    const response = await axios.post('http://localhost:3000/auth/login', { username: user });
+    const response = await axios.post(`${BASE_URL}auth/login`, { username: user });
     dispatch(signInSuccess(response.data));
   } catch (error) {
     dispatch(signInFailure(error));

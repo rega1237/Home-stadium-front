@@ -22,9 +22,9 @@
 - JavaScript
 - React & Redux
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo]()
+[Live Demo](https://homestadium.netlify.app/home)
 
 # Getting Started with Create React App
 
