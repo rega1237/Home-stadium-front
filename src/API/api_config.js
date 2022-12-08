@@ -1,4 +1,4 @@
-const BASE_URL = 'https://stadiums-rails-api.herokuapp.com/';
+const BASE_URL = 'https://homestadium.onrender.com/';
 const STADIUM = 'stadium/';
 
 export {
